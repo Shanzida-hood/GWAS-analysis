@@ -1,0 +1,481 @@
+Last login: Sat May  8 00:25:48 on ttys000
+shanzida@Shanzidas-MacBook-Pro ~ % ssh -x sjahansi@jhpce01.jhsph.edu
+
+
+Verification code: 
+Password: 
+Verification code: 
+Password: 
+Last failed login: Sat May  8 02:14:27 EDT 2021 from c-69-255-245-3.hsd1.md.comcast.net on ssh:notty
+There was 1 failed login attempt since the last successful login.
+Last login: Sat May  8 00:26:42 2021 from c-69-255-245-3.hsd1.md.comcast.net
+---
+Use of this system constitutes agreement to adhere to all applicable 
+JHU and JHSPH network and computer use policies.
+---
+
+Please see this link for information regarding COVID-19 and the JHPCE cluster:
+https://jhpce.jhu.edu/2020/03/13/covid-19-information-for-the-jhpce-cluster/
+
+The shared queue is currently at 65% core occupancy and 67% RAM occupancy.
+--------------------------------------
+     Your Home Directory Usage        
+Username    Space Used        Quota     
+sjahansi    89.9G             100G      
+--------------------------------------
+[jhpce01 /users/sjahansi]$ qrsh
+Last login: Wed Apr 28 03:57:22 2021 from jhpce01.cm.cluster
+[compute-111 /users/sjahansi]$ cd bin
+[compute-111 /users/sjahansi/bin]$ ls
+bcftools             generic-metal                        Linux-metal.tar.gz
+checkVCF             ghostscript-9.54.0-linux-x86_64      plink
+epacts               ghostscript-9.54.0-linux-x86_64.tgz  samtools
+EPACTS               htslib                               samtools-1.11
+EPACTS-3.2.6         index.html                           samtools-1.11.tar.bz2
+EPACTS-3.2.6.tar.gz  index.html.1                         SNPtest
+[compute-111 /users/sjahansi/bin]$ cd EPACTS-3.2.6  
+[compute-111 /users/sjahansi/bin/EPACTS-3.2.6]$ ls
+aclocal.m4    config.h.in    COPYING     libtool      missing  stamp-h1
+AUTHORS       config.log     data        ltmain.sh    NEWS
+bin           config.status  depcomp     m4           README
+ChangeLog     config.sub     INSTALL     Makefile     scripts
+config.guess  configure      install-sh  Makefile.am  share
+config.h      configure.ac   lib         Makefile.in  src
+[compute-111 /users/sjahansi/bin/EPACTS-3.2.6]$ cd bin
+[compute-111 /users/sjahansi/bin/EPACTS-3.2.6/bin]$ ls
+anno                epacts-download    epacts-single
+bgzip               epacts-enrich      epacts-zoom
+chaps               epacts-group       epstopdf
+core.111456         epacts-make-group  [output-group-file]
+core.14230          epacts-make-kin    pEmmax
+core.14437          epacts-multi       study_chr1_PanC4.group.vcf.gz
+epacts              epacts_PanC4.sh    tabix
+epacts-anno         epacts-pca-plot    test_run_epacts.sh
+epacts-cat          epacts-plot        vcfast
+epacts-cis-extract  epacts.pm          wGetOptions.pm
+[compute-111 /users/sjahansi/bin/EPACTS-3.2.6/bin]$ ./epacts-group  --help
+Usage:
+    ./epacts-group [options]
+
+     General Options:
+      -help             Print out brief help message [ON]
+      -man              Print the full documentation in man page style [OFF]
+
+     Required Options:
+      -vcf STR          Input VCF file (tabixed and bgzipped) []
+      -ped STR          Input PED file for phenotypes and covariates []
+      -out STR          Prefix of output files []
+      -test STR         Name of groupwise test []
+      -groupf STR       EPACTS marker group file []
+
+     Key Options:
+      -pheno STR        Name of phenotype column from PED file []
+      -cov STR          (Multiples) Name of covariate column(s) from PED file []
+      -field STR        VCF's FORMAT field of genotypes or dosages [GT]
+      -unit INT         Number of groups for a parallel run [500]
+      -scoref STR       Functional score files to use []
+      -run INT          Run EPACTS immediately with specified # CPUs [-1]
+      -min-maf FLT      Minimum minor allele frequency (MAF) threshold [1e-06]
+      -min-mac INT      Minimum minor allele count (MAC) [1]
+      -max-maf FLT      Maximum MAF of determining 'rare' variants [0.05]
+      -min-callrate FLT Minimum call rate per variant [0.5]
+      -min-rsq FLT      Minimum RSQ_HAT value per variant [0]
+      -sepchr           Indicator that VCFs are separated by chromosomes [OFF]
+      -cond STR         (Multiples) Perform conditional association analysis []
+
+     Additional Options:
+      -missing STR      String representing missing value [NA]
+      -mosix-nodes STR  Comma-separated list of MOSIX cluster nodes []
+      -no-plot          Skip producing the Manhattan and QQ plots [OFF]
+      -restart          Ignore intermediate results and restart [OFF]
+      -inv-norm         Inverse-normal transformation of phenotypes [OFF]
+
+     Options specific to EMMAX (q.emmax) test:
+      -kinf STR         Kinship file produced by epacts make-kin []
+      -remlf STR        REML file produced by other run of q.emmax []
+
+     Options specific to SKAT (skat) test:
+      -skat-o           Run SKAT in optimal mode [OFF]
+      -skat-flat        Use a flat prior instead of beta(1,25) [OFF]
+      -skat-adjust      Small sample size adjustment [OFF]
+      -beta STR         Use a beta prior (comma separated) instead of beta(1,25) [1,25]
+
+     Options specific to CMD (b.collapse) test:
+      -recessive        Use recessive encoding of burden instead dominant [OFF]
+
+Options:
+    -help   Print a brief help message and exits
+
+    -man    Prints the manual page and exits
+
+    --help [ON]
+            Print a help message and exits
+
+    --man [OFF]
+            Prints a manual page and exits upon typing 'q'
+
+    --vcf STR []
+            Input VCF file to calculate kinship matrix from. The VCF file
+            must be tabixed and bgzipped
+
+    --ped STR []
+            PED format file containing a phenotypes (--pheno) and covariates
+            (--cov). By default, 6th column in the PED file will be used as
+            phenotypes, if no --pheno is specified
+
+    --out STR []
+            Prefix of output files to store EPACTS groupwise association
+            results
+
+    --test STR []
+            Name of groupwise association test to use. Below are built-in
+            tests, and additional test may be plugged in. See EPACTS wiki
+            page for more detailed comparisons. b.collapse : Binary trait
+            collapsing (CMC) score test by Li and Leal b.madsen : Binary
+            trait Madsen-Browning frequency-weighted test b.wcnt : Binary
+            trait Frequency-weighted score test q.reverse : QT/Binary trait
+            reverse logistic regression q.wilcox : QT/Binary trait reverse
+            regression wilcoxon test skat : QT/Binary trait SKAT/SKAT-O by
+            Wu et al & Lee et al emmaxCMC : QT/Binary trait EMMAX collapsing
+            test emmaxVT : QT/Binary trait EMMAX Variable Threshold test
+
+    --groupf STR []
+            EPACTS marker group file that defines the groups of markers to
+            be tested for EPACTS groupwise association. See epacts
+            make-group for details on how to produce the marker group file
+
+    --pheno STR []
+            Name of phenotype column from the PED file. The phenotype column
+            name must match with either (1) the header of PED file, starting
+            with #, or (2) the phenotype name provided by separate .dat
+            file. If omitted, 6th column in the PED file will be used as
+            phenotypes
+
+    --cov STR []
+            (Allows multiple values) Name of covariates from the PED file.
+            Multiple use -cov options are allowed. By default, no covariate
+            is assumed except for intercept
+
+    --field STR [GT]
+            VCF's FORMAT field entry to extract the genotype or dosage
+            information. By default, 'GT' is used. If 'PL' or 'GL' field is
+            specified, the genotype likelihoods will be converted into
+            genotype dosages whenever needed
+
+    --unit INT [500]
+            The number of groups to run as a unit of parallelization.
+            Default value is 500
+
+    --scoref STR []
+            Genome-wide functional score file to use. The specific format of
+            the score file is currently not documented, as this option is
+            currently under development. Please contact the developer for
+            the details
+
+    --run INT [-1]
+            Automatically runs GNU make after creating the Makefile. If this
+            is not set, the user must run GNU make separately for finishing
+            the run
+
+    --min-maf FLT [1e-06]
+            Minimum minor allele frequency (MAF) threshold to include into
+            groupwise association test. Default is 1e-6
+
+    --min-mac INT [1]
+            Minimum minor allele acount (MAC) threshold to include into
+            groupwise association test. Default is 1
+
+    --max-maf FLT [0.05]
+            Maximum minor allele frequency (MAF) threshold to be considered
+            as 'rare' variant. Default is 0.05
+
+    --min-callrate FLT [0.5]
+            Minimum call rate, which is the proportion of non-missing
+            genotypes, to run groupwise association test
+
+    --min-rsq FLT [0]
+            Minimum RSQ_HAT value (as a surrogate of imputatio quality)
+            threshold for including in the groupwise test
+
+    --sepchr [OFF]
+            Indicator of separated VCF by chromosomes. The VCF file name
+            must contain chr1, chr2, chr3,....
+
+    --cond STR []
+            (Allows multiple values) Perform conditional association
+            analysis by specifying a marker ID in the format of
+            [CHR]:[POS]_[REF]/[ALT] format. Multiple --cond options are
+            possible.
+
+    --missing STR [NA]
+            String representing missing value. NA is by default
+
+    --mosix-nodes STR []
+            Comma-separated list of MOSIX cluster nodes
+
+    --no-plot [OFF]
+            Skip producing Manhanttan, QQ plots, and top association results
+
+    --restart [OFF]
+            Ignore intermediate results and restart from scratch. Equivalent
+            to running GNU make with -B option
+
+    --inv-norm [OFF]
+            Perform inverse normal transformation (quantile normalization)
+            of phenotypes before running association
+
+    --kinf STR []
+            Kinship file produced by epacts make-kin
+
+    --remlf STR []
+            REML file produced by other run of EMMAX (either single SNP or
+            groupwise associations)
+
+    --skat-o [OFF]
+            Run SKAT-O instead of original SKAT
+
+    --skat-flat [OFF]
+            Use a flat prior, instead of the default prior beta(1,25)
+
+    --skat-adjust [OFF]
+            Perform small sample size adjustment
+
+    --beta STR [1,25]
+            Use a beta prior instead of beta(1,25). The arguments should be
+            comma separated two numbers
+
+    --recessive [OFF]
+            Use recessive encoding of burden instead dominant encoding. Only
+            recessive variants will be considered as carrier of burden. This
+            option
+
+[compute-111 /users/sjahansi/bin/EPACTS-3.2.6/bin]$ ./epacts-group --vcf /dcl01/klein/data/imputation/PANC4_Michigan/output/EPACTS_result/EPACTS_PanC4/study_chr2_PanC4.anno.vcf.gz --groupf /dcl01/klein/data/imputation/PANC4_Michigan/output/EPACTS_result/EPACTS_PanC4/chr2_test.grp  --out /dcl01/klein/data/imputation/PANC4_Michigan/output/EPACTS_result/EPACTS_PanC4/chr2_test.gene.skat --ped  /dcl01/klein/data/imputation/PANC4_Michigan/output/PanC4/column16.ped --test skat-o --max-maf 0.05 --pheno PHENOTYPE --cov AGE --cov SEX --cov EV1 --cov EV2 --cov EV3 --cov EV4 --cov EV5 --cov EV6 --cov EV7 --run -1
+Detected phenotypes with 2 unique values - 1 and 2 - considering them as binary phenotypes... re-encoding them into 1 and 2
+Successfully written phenotypes and 9 covariates across 7955 individuals
+Finished generating EPACTS Makefile
+EPACTS will run the with the following commond:
+	make -f /dcl01/klein/data/imputation/PANC4_Michigan/output/EPACTS_result/EPACTS_PanC4/chr2_test.gene.skat.Makefile -j [# of parallel jobs]
+Or perform sanity checking using the following command:
+	make -f /dcl01/klein/data/imputation/PANC4_Michigan/output/EPACTS_result/EPACTS_PanC4/chr2_test.gene.skat.Makefile -n
+[compute-111 /users/sjahansi/bin/EPACTS-3.2.6/bin]$ make -f /dcl01/klein/data/imputation/PANC4_Michigan/output/EPACTS_result/EPACTS_PanC4/chr2_test.gene.skat.Makefile -j
+Rscript /dcl01/klein/data/imputation/PANC4_Michigan/output/EPACTS_result/EPACTS_PanC4/chr2_test.gene.skat.0.R --vanilla
+make: Rscript: Command not found
+make: *** [/dcl01/klein/data/imputation/PANC4_Michigan/output/EPACTS_result/EPACTS_PanC4/chr2_test.gene.skat.0.epacts] Error 127
+[compute-111 /users/sjahansi/bin/EPACTS-3.2.6/bin]$ module avail
+
+------------ /jhpce/shared/community/modulefiles/compiler/gcc/4.4.7 ------------
+   boost/1.55.0 (D)    gsl/1.16    netcdf/4.3.2    protobuf/2.6.1
+
+------------------- /jhpce/shared/community/modulefiles/core -------------------
+   COMMUNITY_CENTOS7_DEFAULT_ENV (L)      htslib/1.2.1
+   COMMUNITY_DEFAULT_ENV                  htslib/1.9           (D)
+   bcftools/1.1                           jags/3.4.0
+   bcftools/1.2                  (D)      jags/4.2.0           (D)
+   bcftools/1.11                          jags/4.3.0
+   bedtools/2.19.1                        maq/0.7.1
+   bedtools/2.21.0                        mosaik/2.2.26
+   bedtools/2.22.0                        muscle/3.8.31
+   bedtools/2.24.0               (D)      node/0.12.0
+   bismark/0.14.3                         node/14.15.4         (D)
+   blast/2.2.26                           old_conda_R/3.5.x
+   blast/2.2.30                           old_conda_R/3.5
+   blast/2.11.0                  (D)      old_conda_R/3.6      (D)
+   bowtie/1.2.3                           pcre/8.36
+   bowtie2/2.9.2                          rc454/1.2.1
+   bwa/0.7.7                              roche454/2.5.3
+   bwa/0.7.12                    (D)      salmon/0.10.2
+   conda_R/devel                          salmon/1.3.0         (D)
+   conda_R/test                           samtools/1.9
+   conda_R/3.6.x                          seqtools/0.1
+   conda_R/3.6                            sratoolkit/2.4.5
+   conda_R/4.0.x                 (D)      sratoolkit/2.10.8    (D)
+   conda_R/4.0                            ucsctools
+   conda_R/4.1                            vcftools/0.1.12b
+   curl/7.43.0                            vcftools/0.1.12
+   eigen/3.2.1                            vcftools/0.1.14      (D)
+   emacs/26.3                             vcftools/0.1.17
+   freesurfer/6.0.0                       wiggletools/default
+   gcc/4.4.7                     (L,D)    xtandem/sledgehammer
+   htslib/1.1                             xz/5.2.1
+   htslib/1.2
+
+--------------------- /jhpce/shared/jhpce/modulefiles/core ---------------------
+   JHPCE_CENTOS7_DEFAULT_ENV (L)    libz/1.2.8
+   JHPCE_tools/1.0           (L)    mathematica/9.0.1
+   R/3.6.1                   (D)    mathematica/11.3   (D)
+   R/4.0.3                          matlab/R2013b
+   afni/19.3.09                     matlab/R2017b
+   anaconda/2019.03          (D)    matlab/R2019a      (L,D)
+   anaconda/2020.11                 mpich/3.3
+   aws/2.0.54                       openmpi/4.0.1
+   bcl2fastq/1.8.4                  pandoc/2.7.3
+   bcl2fastq/2.20            (D)    perl/5.24.4
+   binutils/2.32                    proj/5.2.0
+   boost/1.44.0                     proj/6.1.1
+   cmake/3.14.5                     proj/7.2.0         (D)
+   cmake/3.15.4              (D)    python/2.7.9
+   conda/3.0                        python/3.6.9
+   conda/3-4.6.14            (D)    python/3.7.3       (D)
+   dcmtk/3.6.5                      python/3.8.3
+   encfs/1.0                        qctool/2.0.7
+   ffmpeg/4.2.1                     rstudio/0.98
+   fsl/6.0.2                        rstudio/1.2.1335
+   gcc/5.5.0                        rstudio/1.2.1555
+   gcc/6.3.0                        rstudio/1.2.5001   (D)
+   gcc/9.1.0                        sas/9.3
+   gdal/2.1.1                       sas/9.4            (D)
+   gdal/3.0.1                       sge/8.1.9          (L,D)
+   gdal/3.2.0                (D)    sge/2011.11p1
+   git/2.17.0                       singularity/3.2.1  (D)
+   git/2.23.0                       singularity/03.2.1
+   git/2.28.0                (D)    singularity/3.6.0
+   glpk/4.65                        spm12/12
+   gnuplot/5.2.8                    stata/13
+   go/1.12.1                        stata/14
+   go/1.14.6                 (D)    stata/15
+   hdf5/1.10.5                      stata/16           (L,D)
+   java/14.0.2                      symphony/5.6.13
+   julia/1.3.1                      tex/2017
+   libpng/1.6.37                    zlib/1.2.11
+   libssh2/1.9.0
+
+  Where:
+   L:  Module is loaded
+   D:  Default Module
+
+Use "module spider" to find all possible modules.
+Use "module keyword key1 key2 ..." to search for all possible modules matching
+any of the "keys".
+
+
+[compute-111 /users/sjahansi/bin/EPACTS-3.2.6/bin]$ 
+[compute-111 /users/sjahansi/bin/EPACTS-3.2.6/bin]$ 
+[compute-111 /users/sjahansi/bin/EPACTS-3.2.6/bin]$ 
+[compute-111 /users/sjahansi/bin/EPACTS-3.2.6/bin]$ 
+[compute-111 /users/sjahansi/bin/EPACTS-3.2.6/bin]$ 
+[compute-111 /users/sjahansi/bin/EPACTS-3.2.6/bin]$ 
+[compute-111 /users/sjahansi/bin/EPACTS-3.2.6/bin]$ 
+[compute-111 /users/sjahansi/bin/EPACTS-3.2.6/bin]$ 
+[compute-111 /users/sjahansi/bin/EPACTS-3.2.6/bin]$ module add R/3.6.1     
+[compute-111 /users/sjahansi/bin/EPACTS-3.2.6/bin]$ ./epacts-group --vcf /dcl01/klein/data/imputation/PANC4_Michigan/output/EPACTS_result/EPACTS_PanC4/study_chr2_PanC4.anno.vcf.gz --groupf /dcl01/klein/data/imputation/PANC4_Michigan/output/EPACTS_result/EPACTS_PanC4/chr2_test.grp  --out /dcl01/klein/data/imputation/PANC4_Michigan/output/EPACTS_result/EPACTS_PanC4/chr2_test.gene.skat --ped  /dcl01/klein/data/imputation/PANC4_Michigan/output/PanC4/column16.ped --test skat-o --max-maf 0.05 --pheno PHENOTYPE --cov AGE --cov SEX --cov EV1 --cov EV2 --cov EV3 --cov EV4 --cov EV5 --cov EV6 --cov EV7 --run -1
+Detected phenotypes with 2 unique values - 1 and 2 - considering them as binary phenotypes... re-encoding them into 1 and 2
+Successfully written phenotypes and 9 covariates across 7955 individuals
+Finished generating EPACTS Makefile
+EPACTS will run the with the following commond:
+	make -f /dcl01/klein/data/imputation/PANC4_Michigan/output/EPACTS_result/EPACTS_PanC4/chr2_test.gene.skat.Makefile -j [# of parallel jobs]
+Or perform sanity checking using the following command:
+	make -f /dcl01/klein/data/imputation/PANC4_Michigan/output/EPACTS_result/EPACTS_PanC4/chr2_test.gene.skat.Makefile -n
+[compute-111 /users/sjahansi/bin/EPACTS-3.2.6/bin]$ make -f /dcl01/klein/data/imputation/PANC4_Michigan/output/EPACTS_result/EPACTS_PanC4/chr2_test.gene.skat.Makefile -j
+Rscript /dcl01/klein/data/imputation/PANC4_Michigan/output/EPACTS_result/EPACTS_PanC4/chr2_test.gene.skat.0.R --vanilla
+Rscript /dcl01/klein/data/imputation/PANC4_Michigan/output/EPACTS_result/EPACTS_PanC4/chr2_test.gene.skat.1.R --vanilla
+Rscript /dcl01/klein/data/imputation/PANC4_Michigan/output/EPACTS_result/EPACTS_PanC4/chr2_test.gene.skat.2.R --vanilla
+Loading required package: epactsR
+Loading required package: epactsR
+Loading required package: epactsR
+Error in file(filename, "r", encoding = encoding) : 
+  cannot open the connection
+Calls: source -> withVisible -> eval -> eval -> source -> file
+In addition: Warning message:
+In file(filename, "r", encoding = encoding) :
+  cannot open file 'group.skat-o.R': No such file or directory
+Execution halted
+make: *** [/dcl01/klein/data/imputation/PANC4_Michigan/output/EPACTS_result/EPACTS_PanC4/chr2_test.gene.skat.0.epacts] Error 1
+make: *** Waiting for unfinished jobs....
+Error in file(filename, "r", encoding = encoding) : 
+  cannot open the connection
+Calls: source -> withVisible -> eval -> eval -> source -> file
+In addition: Warning message:
+In file(filename, "r", encoding = encoding) :
+  cannot open file 'group.skat-o.R': No such file or directory
+Execution halted
+Error in file(filename, "r", encoding = encoding) : 
+  cannot open the connection
+Calls: source -> withVisible -> eval -> eval -> source -> file
+In addition: Warning message:
+In file(filename, "r", encoding = encoding) :
+  cannot open file 'group.skat-o.R': No such file or directory
+Execution halted
+make: *** [/dcl01/klein/data/imputation/PANC4_Michigan/output/EPACTS_result/EPACTS_PanC4/chr2_test.gene.skat.2.epacts] Error 1
+make: *** [/dcl01/klein/data/imputation/PANC4_Michigan/output/EPACTS_result/EPACTS_PanC4/chr2_test.gene.skat.1.epacts] Error 1
+[compute-111 /users/sjahansi/bin/EPACTS-3.2.6/bin]$ ./epacts-group --vcf /dcl01/klein/data/imputation/PANC4_Michigan/output/EPACTS_result/EPACTS_PanC4/study_chr2_PanC4.anno.vcf.gz --groupf /dcl01/klein/data/imputation/PANC4_Michigan/output/EPACTS_result/EPACTS_PanC4/chr2_test.grp  --out /dcl01/klein/data/imputation/PANC4_Michigan/output/EPACTS_result/EPACTS_PanC4/chr2_test.gene.skat --ped  /dcl01/klein/data/imputation/PANC4_Michigan/output/PanC4/column16.ped --test skat --max-maf 0.05 --pheno PHENOTYPE --cov AGE --cov SEX --cov EV1 --cov EV2 --cov EV3 --cov EV4 --cov EV5 --cov EV6 --cov EV7 --run -1
+Detected phenotypes with 2 unique values - 1 and 2 - considering them as binary phenotypes... re-encoding them into 1 and 2
+Successfully written phenotypes and 9 covariates across 7955 individuals
+Finished generating EPACTS Makefile
+EPACTS will run the with the following commond:
+	make -f /dcl01/klein/data/imputation/PANC4_Michigan/output/EPACTS_result/EPACTS_PanC4/chr2_test.gene.skat.Makefile -j [# of parallel jobs]
+Or perform sanity checking using the following command:
+	make -f /dcl01/klein/data/imputation/PANC4_Michigan/output/EPACTS_result/EPACTS_PanC4/chr2_test.gene.skat.Makefile -n
+[compute-111 /users/sjahansi/bin/EPACTS-3.2.6/bin]$ make -f /dcl01/klein/data/imputation/PANC4_Michigan/output/EPACTS_result/EPACTS_PanC4/chr2_test.gene.skat.Makefile
+Rscript /dcl01/klein/data/imputation/PANC4_Michigan/output/EPACTS_result/EPACTS_PanC4/chr2_test.gene.skat.0.R --vanilla
+Loading required package: epactsR
+Loading required package: mmSKAT
+NULL
+Sucessfully wrote ( 500 * 7 ) matrix
+There were 50 or more warnings (use warnings() to see the first 50)
+Rscript /dcl01/klein/data/imputation/PANC4_Michigan/output/EPACTS_result/EPACTS_PanC4/chr2_test.gene.skat.1.R --vanilla
+Loading required package: epactsR
+Loading required package: mmSKAT
+NULL
+Sucessfully wrote ( 500 * 7 ) matrix
+There were 50 or more warnings (use warnings() to see the first 50)
+Rscript /dcl01/klein/data/imputation/PANC4_Michigan/output/EPACTS_result/EPACTS_PanC4/chr2_test.gene.skat.2.R --vanilla
+Loading required package: epactsR
+Loading required package: mmSKAT
+NULL
+Sucessfully wrote ( 67 * 7 ) matrix
+There were 50 or more warnings (use warnings() to see the first 50)
+(head -1 /dcl01/klein/data/imputation/PANC4_Michigan/output/EPACTS_result/EPACTS_PanC4/chr2_test.gene.skat.0.epacts; cat /dcl01/klein/data/imputation/PANC4_Michigan/output/EPACTS_result/EPACTS_PanC4/chr2_test.gene.skat.0.epacts /dcl01/klein/data/imputation/PANC4_Michigan/output/EPACTS_result/EPACTS_PanC4/chr2_test.gene.skat.1.epacts /dcl01/klein/data/imputation/PANC4_Michigan/output/EPACTS_result/EPACTS_PanC4/chr2_test.gene.skat.2.epacts | grep -v ^#;) > /dcl01/klein/data/imputation/PANC4_Michigan/output/EPACTS_result/EPACTS_PanC4/chr2_test.gene.skat.epacts
+rm /dcl01/klein/data/imputation/PANC4_Michigan/output/EPACTS_result/EPACTS_PanC4/chr2_test.gene.skat.0.epacts /dcl01/klein/data/imputation/PANC4_Michigan/output/EPACTS_result/EPACTS_PanC4/chr2_test.gene.skat.1.epacts /dcl01/klein/data/imputation/PANC4_Michigan/output/EPACTS_result/EPACTS_PanC4/chr2_test.gene.skat.2.epacts /dcl01/klein/data/imputation/PANC4_Michigan/output/EPACTS_result/EPACTS_PanC4/chr2_test.gene.skat.0.R /dcl01/klein/data/imputation/PANC4_Michigan/output/EPACTS_result/EPACTS_PanC4/chr2_test.gene.skat.1.R /dcl01/klein/data/imputation/PANC4_Michigan/output/EPACTS_result/EPACTS_PanC4/chr2_test.gene.skat.2.R
+/users/sjahansi/bin/EPACTS-3.2.6/bin/epacts-plot --in /dcl01/klein/data/imputation/PANC4_Michigan/output/EPACTS_result/EPACTS_PanC4/chr2_test.gene.skat.epacts
+nsnps = 1035
+Rscript /dcl01/klein/data/imputation/PANC4_Michigan/output/EPACTS_result/EPACTS_PanC4/chr2_test.gene.skat.epacts.R --vanilla
+
+export GDFONTPATH=/users/sjahansi/bin/EPACTS-3.2.6/share/EPACTS; export GNUPLOT_FONTPATH=/users/sjahansi/bin/EPACTS-3.2.6/share/EPACTS; export GNUPLOT_PS_DIR=/users/sjahansi/bin/EPACTS-3.2.6/share/EPACTS; export PATH=$PATH:/users/sjahansi/bin/EPACTS-3.2.6/bin/; export GNUPLOT_PFBTOPFA="pfbtops %s"; gnuplot /dcl01/klein/data/imputation/PANC4_Michigan/output/EPACTS_result/EPACTS_PanC4/chr2_test.gene.skat.epacts.cmd
+export GDFONTPATH=/users/sjahansi/bin/EPACTS-3.2.6/share/EPACTS; export GNUPLOT_FONTPATH=/users/sjahansi/bin/EPACTS-3.2.6/share/EPACTS; export GNUPLOT_PS_DIR=/users/sjahansi/bin/EPACTS-3.2.6/share/EPACTS; export PATH=$PATH:/users/sjahansi/bin/EPACTS-3.2.6/bin/; export GNUPLOT_PFBTOPFA="pfbtops %s"; /users/sjahansi/bin/EPACTS-3.2.6/bin/epstopdf /dcl01/klein/data/imputation/PANC4_Michigan/output/EPACTS_result/EPACTS_PanC4/chr2_test.gene.skat.epacts.qq.eps
+export GDFONTPATH=/users/sjahansi/bin/EPACTS-3.2.6/share/EPACTS; export GNUPLOT_FONTPATH=/users/sjahansi/bin/EPACTS-3.2.6/share/EPACTS; export GNUPLOT_PS_DIR=/users/sjahansi/bin/EPACTS-3.2.6/share/EPACTS; export PATH=$PATH:/users/sjahansi/bin/EPACTS-3.2.6/bin/; export GNUPLOT_PFBTOPFA="pfbtops %s"; gnuplot /dcl01/klein/data/imputation/PANC4_Michigan/output/EPACTS_result/EPACTS_PanC4/chr2_test.gene.skat.epacts.cmd
+export GDFONTPATH=/users/sjahansi/bin/EPACTS-3.2.6/share/EPACTS; export GNUPLOT_FONTPATH=/users/sjahansi/bin/EPACTS-3.2.6/share/EPACTS; export GNUPLOT_PS_DIR=/users/sjahansi/bin/EPACTS-3.2.6/share/EPACTS; export PATH=$PATH:/users/sjahansi/bin/EPACTS-3.2.6/bin/; export GNUPLOT_PFBTOPFA="pfbtops %s"; /users/sjahansi/bin/EPACTS-3.2.6/bin/epstopdf /dcl01/klein/data/imputation/PANC4_Michigan/output/EPACTS_result/EPACTS_PanC4/chr2_test.gene.skat.epacts.mh.eps
+rm /dcl01/klein/data/imputation/PANC4_Michigan/output/EPACTS_result/EPACTS_PanC4/chr2_test.gene.skat.epacts.cmd /dcl01/klein/data/imputation/PANC4_Michigan/output/EPACTS_result/EPACTS_PanC4/chr2_test.gene.skat.epacts.qq.eps /dcl01/klein/data/imputation/PANC4_Michigan/output/EPACTS_result/EPACTS_PanC4/chr2_test.gene.skat.epacts.mh.eps /dcl01/klein/data/imputation/PANC4_Michigan/output/EPACTS_result/EPACTS_PanC4/chr2_test.gene.skat.epacts.*.dat
+cat /dcl01/klein/data/imputation/PANC4_Michigan/output/EPACTS_result/EPACTS_PanC4/chr2_test.gene.skat.epacts | awk '$10 != "NA" { print $0 }' | sort -g -k 10 | head -n 5000 > /dcl01/klein/data/imputation/PANC4_Michigan/output/EPACTS_result/EPACTS_PanC4/chr2_test.gene.skat.epacts.top5000
+touch /dcl01/klein/data/imputation/PANC4_Michigan/output/EPACTS_result/EPACTS_PanC4/chr2_test.gene.skat.epacts.OK
+[compute-111 /users/sjahansi/bin/EPACTS-3.2.6/bin]$ cd /dcl01/klein/data/imputation/PANC4_Michigan/output/EPACTS_result/EPACTS_PanC4/ 
+[compute-111 /dcl01/klein/data/imputation/PANC4_Michigan/output/EPACTS_result/EPACTS_PanC4]$ ls
+chr1_PanC4.group.vcf                chr2_test.gene.skat.phe       study_chr10_PanC4.anno.vcf.gz      study_chr15_PanC4.anno.vcf.gz.tbi  study_chr1_PanC4.group.vcf.gz      study_chr4_PanC4.anno.vcf.gz      study_chr9_PanC4.anno.vcf.gz.tbi
+chr2_test.gene.skat.cov             chr2_test.grp                 study_chr10_PanC4.anno.vcf.gz.tbi  study_chr16_PanC4.anno.vcf.gz      study_chr20_PanC4.anno.vcf.gz      study_chr4_PanC4.anno.vcf.gz.tbi  test.gene.skat.cov
+chr2_test.gene.skat.epacts          chr3_test.anno.grp            study_chr11_PanC4.anno.vcf.gz      study_chr16_PanC4.anno.vcf.gz.tbi  study_chr20_PanC4.anno.vcf.gz.tbi  study_chr5_PanC4.anno.vcf.gz      test.gene.skat.ind
+chr2_test.gene.skat.epacts.conf     chr3_test.anno.vcf.gz         study_chr11_PanC4.anno.vcf.gz.tbi  study_chr17_PanC4.anno.vcf.gz      study_chr21_PanC4.anno.vcf.gz      study_chr5_PanC4.anno.vcf.gz.tbi  test.gene.skat.Makefile
+chr2_test.gene.skat.epacts.mh.pdf   chr3_test.anno.vcf.gz.tbi     study_chr12_PanC4.anno.vcf.gz      study_chr17_PanC4.anno.vcf.gz.tbi  study_chr21_PanC4.anno.vcf.gz.tbi  study_chr6_PanC4.anno.vcf.gz      test.gene.skat.phe
+chr2_test.gene.skat.epacts.OK       chr3_test.gene.skat.0.R       study_chr12_PanC4.anno.vcf.gz.tbi  study_chr18_PanC4.anno.vcf.gz      study_chr22_PanC4.anno.vcf.gz      study_chr6_PanC4.anno.vcf.gz.tbi
+chr2_test.gene.skat.epacts.qq.pdf   chr3_test.gene.skat.1.R       study_chr13_PanC4.anno.vcf.gz      study_chr18_PanC4.anno.vcf.gz.tbi  study_chr22_PanC4.anno.vcf.gz.tbi  study_chr7_PanC4.anno.vcf.gz
+chr2_test.gene.skat.epacts.R        chr3_test.gene.skat.cov       study_chr13_PanC4.anno.vcf.gz.tbi  study_chr19_PanC4.anno.vcf.gz      study_chr2_PanC4.anno.vcf.gz       study_chr7_PanC4.anno.vcf.gz.tbi
+chr2_test.gene.skat.epacts.top5000  chr3_test.gene.skat.ind       study_chr14_PanC4.anno.vcf.gz      study_chr19_PanC4.anno.vcf.gz.tbi  study_chr2_PanC4.anno.vcf.gz.tbi   study_chr8_PanC4.anno.vcf.gz
+chr2_test.gene.skat.ind             chr3_test.gene.skat.Makefile  study_chr14_PanC4.anno.vcf.gz.tbi  study_chr1_PanC4.anno.vcf.gz       study_chr3_PanC4.anno.vcf.gz       study_chr8_PanC4.anno.vcf.gz.tbi
+chr2_test.gene.skat.Makefile        chr3_test.gene.skat.phe       study_chr15_PanC4.anno.vcf.gz      study_chr1_PanC4.anno.vcf.gz.tbi   study_chr3_PanC4.anno.vcf.gz.tbi   study_chr9_PanC4.anno.vcf.gz
+[compute-111 /dcl01/klein/data/imputation/PANC4_Michigan/output/EPACTS_result/EPACTS_PanC4]$ head -6 chr2_test.gene.skat.epacts.top5000
+#CHROM	BEGIN	END	MARKER_ID	NS	FRAC_WITH_RARE	NUM_ALL_VARS	NUM_PASS_VARS	NUM_SING_VARS	PVALUE	QSTAT
+2	224897	243504	2:224897-243504_SH3YL1	7955	0.0066625	4	2	0	7.6794e-05	51566
+2	71730412	71908183	2:71730412-71908183_DYSF	7955	0.19485	43	42	3	0.00083124	2.8918e+05
+2	95815229	95818506	2:95815229-95818506_ZNF514	7955	0.011565	6	6	0	0.0034623	32089
+2	36704089	36774247	2:36704089-36774247_CRIM1	7955	0.037586	9	9	0	0.0041755	73957
+2	160585617	160621167	2:160585617-160621167_MARCH7	7955	0.16392	11	10	0	0.0042798	2.0489e+05
+[compute-111 /dcl01/klein/data/imputation/PANC4_Michigan/output/EPACTS_result/EPACTS_PanC4]$ head -20 chr2_test.gene.skat.epacts.top5000
+#CHROM	BEGIN	END	MARKER_ID	NS	FRAC_WITH_RARE	NUM_ALL_VARS	NUM_PASS_VARS	NUM_SING_VARS	PVALUE	QSTAT
+2	224897	243504	2:224897-243504_SH3YL1	7955	0.0066625	4	2	0	7.6794e-05	51566
+2	71730412	71908183	2:71730412-71908183_DYSF	7955	0.19485	43	42	3	0.00083124	2.8918e+05
+2	95815229	95818506	2:95815229-95818506_ZNF514	7955	0.011565	6	6	0	0.0034623	32089
+2	36704089	36774247	2:36704089-36774247_CRIM1	7955	0.037586	9	9	0	0.0041755	73957
+2	160585617	160621167	2:160585617-160621167_MARCH7	7955	0.16392	11	10	0	0.0042798	2.0489e+05
+2	64778730	64819143	2:64778730-64819143_AFTPH	7955	0.055688	19	19	1	0.009805	83921
+2	223084881	223158892	2:223084881-223158892_PAX3	7955	0.081207	4	4	0	0.009883	44756
+2	192160921	192279339	2:192160921-192279339_MYO1B	7955	0.0089252	7	7	0	0.010113	16437
+2	202050562	202082397	2:202050562-202082397_CASP10	7955	0.086864	9	8	1	0.011329	50985
+2	178528608	178969133	2:178528608-178969133_PDE11A	7955	0.17599	20	18	2	0.011663	1.0651e+05
+2	234601669	234681059	2:234601669-234681059_UGT1A6	7955	0.0011314	7	4	1	0.011671	2443.8
+2	113885322	113890443	2:113885322-113890443_IL1RN	7955	0.0052797	4	4	1	0.013875	11073
+2	97268597	97276865	2:97268597-97276865_KANSL3	7955	0.046512	6	6	0	0.0179	55854
+2	166535615	166536237	2:166535615-166536237_CSRNP3	7955	0.041106	3	3	1	0.018266	50899
+2	105959538	105961794	2:105959538-105961794_C2orf49	7955	0.12005	5	5	0	0.01955	62073
+2	163208877	163215655	2:163208877-163215655_GCA	7955	0.010685	4	3	0	0.020059	22138
+2	12858444	12864766	2:12858444-12864766_TRIB2	7955	0.038843	3	2	0	0.022175	47792
+2	80529551	80530868	2:80529551-80530868_LRRTM1	7955	0.059585	8	7	0	0.023465	50050
+2	120194499	120194744	2:120194499-120194744_TMEM37	7955	0.0074167	5	5	0	0.023718	15952
+[compute-111 /dcl01/klein/data/imputation/PANC4_Michigan/output/EPACTS_result/EPACTS_PanC4]$ 

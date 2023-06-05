@@ -1,0 +1,2 @@
+#!/bin/bash
+/users/sjahansi/bin/bcftools/bcftools-1.11/bcftools annotate -a /dcl01/klein/data/imputation/PANC4_Michigan/output/PanC4/imputation_correct/vcf_files_download_Michigan/chr_1/PanC4_chr1_annotation.txt.gz -h /users/sjahansi/hdr.txt -c CHROM,POS,POS,REF,ALT,ANNO /dcl01/klein/data/imputation/PANC4_Michigan/output/PanC4/imputation_correct/vcf_files_download_Michigan/chr_1/chr1.dose.vcf -o /dcl01/klein/data/imputation/PANC4_Michigan/output/PanC4/imputation_correct/vcf_files_download_Michigan/chr_1/Panc4_chr1.dose.anno.vcf

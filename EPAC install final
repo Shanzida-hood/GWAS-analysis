@@ -1,0 +1,1941 @@
+Last login: Fri Apr 23 06:55:21 on ttys000
+-bash: /usr/liberxec/java_home: No such file or directory
+-bash: export: `2019.10': not a valid identifier
+(base) Shanzidas-MacBook-Air:~ shanzida$ ssh -x sjahansi@jhpce01.jhsph.edu
+Verification code: 
+Password: 
+Last login: Fri Apr 23 06:56:24 2021 from c-69-255-245-3.hsd1.md.comcast.net
+---
+Use of this system constitutes agreement to adhere to all applicable 
+JHU and JHSPH network and computer use policies.
+---
+
+Please see this link for information regarding COVID-19 and the JHPCE cluster:
+https://jhpce.jhu.edu/2020/03/13/covid-19-information-for-the-jhpce-cluster/
+
+The shared queue is currently at 69% core occupancy and 79% RAM occupancy.
+--------------------------------------
+     Your Home Directory Usage        
+Username    Space Used        Quota     
+sjahansi    72.6G             100G      
+--------------------------------------
+You have 1 qrsh jobs. Please terminate them if do not need
+5026137 0.60000 QRLOGIN    sjahansi     r     04/23/2021 06:56:30 shared.q@compute-067.cm.cluste     1        
+---------------------------------------------------------------
+[jhpce01 /users/sjahansi]$ qrsh
+Last login: Wed Mar 31 16:04:15 2021 from jhpce01.cm.cluster
+[compute-092 /users/sjahansi]$ cd bin
+[compute-092 /users/sjahansi/bin]$ ls
+bcftools  EPACTS               generic-metal                        htslib        Linux-metal.tar.gz  samtools-1.11
+checkVCF  EPACTS-3.2.6         ghostscript-9.54.0-linux-x86_64      index.html    plink               samtools-1.11.tar.bz2
+epacts    EPACTS-3.2.6.tar.gz  ghostscript-9.54.0-linux-x86_64.tgz  index.html.1  samtools            SNPtest
+[compute-092 /users/sjahansi/bin]$ cd epacts
+[compute-092 /users/sjahansi/bin/epacts]$ ls
+EPACTS                        ghostscript-9.54.0-linux-x86_64      ghostscript-9.54.0-linux-x86.tgz  groff-1.22.4
+ghostscript-9.54.0-linux-x86  ghostscript-9.54.0-linux-x86_64.tgz  groff                             groff-1.22.4.tar.gz
+[compute-092 /users/sjahansi/bin/epacts]$ cd groff
+[compute-092 /users/sjahansi/bin/epacts/groff]$ ls
+acinclude.m4    ChangeLog      ChangeLog.120  doc          INSTALL.extra      man         PROJECTS       THANKS
+arch            ChangeLog.115  ChangeLog.121  FDL          INSTALL.REPO       MANIFEST    README         tmac
+AUTHORS         ChangeLog.116  ChangeLog.122  font         LICENSES           mdate.pl    README.git     TODO
+bootstrap       ChangeLog.117  configure.ac   FOR-RELEASE  m4                 MORE.STUFF  README.MinGW   update-copyright.sh
+bootstrap.conf  ChangeLog.118  contrib        gendef.sh    Makefile.am        NEWS        src
+BUG-REPORT      ChangeLog.119  COPYING        gnulib       makevarescape.sed  PROBLEMS    test-groff.in
+[compute-092 /users/sjahansi/bin/epacts/groff]$ rm -r groff
+rm: cannot remove ‘groff’: No such file or directory
+[compute-092 /users/sjahansi/bin/epacts/groff]$ cd ..
+[compute-092 /users/sjahansi/bin/epacts]$ rm -r groff
+rm: remove write-protected regular file ‘groff/.git/objects/pack/pack-f2a98437e8f7b2c9edde6c5ff5130edd1e1a7ea3.idx’? y
+rm: remove write-protected regular file ‘groff/.git/objects/pack/pack-f2a98437e8f7b2c9edde6c5ff5130edd1e1a7ea3.pack’? y
+[compute-092 /users/sjahansi/bin/epacts]$ ls
+EPACTS                        ghostscript-9.54.0-linux-x86_64      ghostscript-9.54.0-linux-x86.tgz  groff-1.22.4.tar.gz
+ghostscript-9.54.0-linux-x86  ghostscript-9.54.0-linux-x86_64.tgz  groff-1.22.4
+[compute-092 /users/sjahansi/bin/epacts]$ cd groff-1.22.4
+[compute-092 /users/sjahansi/bin/epacts/groff-1.22.4]$ ls
+acinclude.m4   charset.alias  gdiffmk                  grolj4         Makefile            penguin.ps    roff2ps
+aclocal.m4     chem           gendef.sh                gropdf         Makefile.am         pfbtops       roff2text
+addftinfo      config.log     glilypond                grops          Makefile.in         pic           roff2x
+afmtodit       config.status  gnu.eps                  grotty         makevarescape.sed   pic2graph     share
+arch           configure      gnulib_m4                hpftodit       man                 post-grohtml  shdeps.sed
+AUTHORS        configure.ac   gperl                    indxbib        MANIFEST            preconv       soelim
+bin            contrib        gpinyin                  INSTALL        mdate.pl            pre-grohtml   src
+BUG-REPORT     COPYING        grap2graph               INSTALL.extra  mmroff              PROBLEMS      tbl
+build-aux      core.42115     grn                      INSTALL.REPO   MORE.STUFF          PROJECTS      test-groff
+ChangeLog      core.52908     grodvi                   lib            neqn                README        test-groff.in
+ChangeLog.115  defs.h         groff                    libbib.a       NEWS                README.MinGW  tfmtodit
+ChangeLog.116  doc            groffer                  libdriver.a    nroff               ref-add.sed   THANKS
+ChangeLog.117  eqn            groff_opts_no_arg.txt    libgroff.a     pdfmom              ref-del.sed   tmac
+ChangeLog.118  eqn2graph      groff_opts.tmp           LICENSES       pdfroff             refer         TODO
+ChangeLog.119  FDL            groff_opts_with_arg.txt  lkbib          pdfroff-RHNFQCA75l  roff2dvi      troff
+ChangeLog.120  font           grog                     lookbib        pdfroff-w1jh4uZthU  roff2html
+ChangeLog.121  FOR-RELEASE    grolbp                   m4             penguin.pdf         roff2pdf
+[compute-092 /users/sjahansi/bin/epacts/groff-1.22.4]$  pfbtops  --usuage
+pfbtops: unrecognized option `--usuage'
+usage: pfbtops [-v] [pfb_file]
+[compute-092 /users/sjahansi/bin/epacts/groff-1.22.4]$ pfbtops [-v] [pfb_file]
+usage: pfbtops [-v] [pfb_file]
+[compute-092 /users/sjahansi/bin/epacts/groff-1.22.4]$ cd ..
+[compute-092 /users/sjahansi/bin/epacts]$ ls 
+EPACTS                        ghostscript-9.54.0-linux-x86_64      ghostscript-9.54.0-linux-x86.tgz  groff-1.22.4.tar.gz
+ghostscript-9.54.0-linux-x86  ghostscript-9.54.0-linux-x86_64.tgz  groff-1.22.4
+[compute-092 /users/sjahansi/bin/epacts]$ cd EPACTS
+[compute-092 /users/sjahansi/bin/epacts/EPACTS]$ ls
+aclocal.m4      config.h.in    config.sub                data        LICENSE    Makefile.am  scripts
+autom4te.cache  config.h.in~   configure                 depcomp     ltmain.sh  Makefile.in  src
+config.guess    config.log     configure-19062018-1_log  install-sh  m4         missing      stamp-h1
+config.h        config.status  configure.ac              libtool     Makefile   README.md
+[compute-092 /users/sjahansi/bin/epacts/EPACTS]$ ./configure --prefix /users/sjahansi/bin/epacts/EPACTS
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /usr/bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking build system type... x86_64-unknown-linux-gnu
+checking host system type... x86_64-unknown-linux-gnu
+checking how to print strings... printf
+checking for style of include used by make... GNU
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking dependency style of gcc... gcc3
+checking for a sed that does not truncate output... /usr/bin/sed
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for egrep... /usr/bin/grep -E
+checking for fgrep... /usr/bin/grep -F
+checking for ld used by gcc... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 50331648
+checking how to convert x86_64-unknown-linux-gnu file names to x86_64-unknown-linux-gnu format... func_convert_file_noop
+checking how to convert x86_64-unknown-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for /usr/bin/ld option to reload object files... -r
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for ar... ar
+checking for archiver @FILE support... @
+checking for strip... strip
+checking for ranlib... ranlib
+checking command to parse /usr/bin/nm -B output from gcc object... ok
+checking for sysroot... no
+checking for a working dd... /usr/bin/dd
+checking how to truncate binary pipes... /usr/bin/dd bs=4096 count=1
+checking for mt... no
+checking if : is a manifest tool... no
+checking how to run the C preprocessor... gcc -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if gcc supports -fno-rtti -fno-exceptions... no
+checking for gcc option to produce PIC... -fPIC -DPIC
+checking if gcc PIC flag -fPIC -DPIC works... yes
+checking if gcc static flag -static works... no
+checking if gcc supports -c -o file.o... yes
+checking if gcc supports -c -o file.o... (cached) yes
+checking whether the gcc linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... yes
+checking for g++... g++
+checking whether we are using the GNU C++ compiler... yes
+checking whether g++ accepts -g... yes
+checking dependency style of g++... gcc3
+checking how to run the C++ preprocessor... g++ -E
+checking for ld used by g++... /usr/bin/ld -m elf_x86_64
+checking if the linker (/usr/bin/ld -m elf_x86_64) is GNU ld... yes
+checking whether the g++ linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking for g++ option to produce PIC... -fPIC -DPIC
+checking if g++ PIC flag -fPIC -DPIC works... yes
+checking if g++ static flag -static works... no
+checking if g++ supports -c -o file.o... yes
+checking if g++ supports -c -o file.o... (cached) yes
+checking whether the g++ linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking dynamic linker characteristics... (cached) GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking for gcc... (cached) gcc
+checking whether we are using the GNU C compiler... (cached) yes
+checking whether gcc accepts -g... (cached) yes
+checking for gcc option to accept ISO C89... (cached) none needed
+checking dependency style of gcc... (cached) gcc3
+checking limits.h usability... yes
+checking limits.h presence... yes
+checking for limits.h... yes
+checking stddef.h usability... yes
+checking stddef.h presence... yes
+checking for stddef.h... yes
+checking for stdint.h... (cached) yes
+checking for stdlib.h... (cached) yes
+checking for string.h... (cached) yes
+checking for unistd.h... (cached) yes
+checking for stdbool.h that conforms to C99... yes
+checking for _Bool... yes
+checking for inline... inline
+checking for int32_t... yes
+checking for int64_t... yes
+checking for C/C++ restrict keyword... __restrict
+checking for size_t... yes
+checking for uint16_t... yes
+checking for uint32_t... yes
+checking for uint64_t... yes
+checking for uint8_t... yes
+checking for ptrdiff_t... yes
+checking for error_at_line... yes
+checking for stdlib.h... (cached) yes
+checking for GNU libc compatible malloc... yes
+checking whether sys/types.h defines makedev... yes
+checking for stdlib.h... (cached) yes
+checking for GNU libc compatible realloc... yes
+checking for working strtod... yes
+checking for floor... no
+checking for gethostname... yes
+checking for memset... yes
+checking for pow... no
+checking for select... yes
+checking for sqrt... no
+checking for strchr... yes
+checking for strstr... yes
+checking for strtol... yes
+checking for gzopen in -lz... yes
+checking for perl... yes
+checking for gs... yes
+checking for Rscript... no
+configure: error: Please install latest version of R before installing.
+[compute-092 /users/sjahansi/bin/epacts/EPACTS]$ module avail
+
+----------------------------------- /jhpce/shared/community/modulefiles/compiler/gcc/4.4.7 -----------------------------------
+   boost/1.55.0 (D)    gsl/1.16    netcdf/4.3.2    protobuf/2.6.1
+
+------------------------------------------ /jhpce/shared/community/modulefiles/core ------------------------------------------
+   COMMUNITY_CENTOS7_DEFAULT_ENV (L)    bwa/0.7.7                 htslib/1.2.1             roche454/2.5.3
+   COMMUNITY_DEFAULT_ENV                bwa/0.7.12       (D)      htslib/1.9        (D)    salmon/0.10.2
+   bcftools/1.1                         conda_R/devel             jags/3.4.0               salmon/1.3.0         (D)
+   bcftools/1.2                  (D)    conda_R/test              jags/4.2.0        (D)    samtools/1.9
+   bcftools/1.11                        conda_R/3.6.x             jags/4.3.0               seqtools/0.1
+   bedtools/2.19.1                      conda_R/3.6               maq/0.7.1                sratoolkit/2.4.5
+   bedtools/2.21.0                      conda_R/4.0.x    (D)      mosaik/2.2.26            sratoolkit/2.10.8    (D)
+   bedtools/2.22.0                      conda_R/4.0               muscle/3.8.31            ucsctools
+   bedtools/2.24.0               (D)    curl/7.43.0               node/0.12.0              vcftools/0.1.12b
+   bismark/0.14.3                       eigen/3.2.1               node/14.15.4      (D)    vcftools/0.1.12
+   blast/2.2.26                         emacs/26.3                old_conda_R/3.5.x        vcftools/0.1.14      (D)
+   blast/2.2.30                         freesurfer/6.0.0          old_conda_R/3.5          vcftools/0.1.17
+   blast/2.11.0                  (D)    gcc/4.4.7        (L,D)    old_conda_R/3.6   (D)    wiggletools/default
+   bowtie/1.2.3                         htslib/1.1                pcre/8.36                xtandem/sledgehammer
+   bowtie2/2.9.2                        htslib/1.2                rc454/1.2.1              xz/5.2.1
+
+-------------------------------------------- /jhpce/shared/jhpce/modulefiles/core --------------------------------------------
+   JHPCE_CENTOS7_DEFAULT_ENV (L)    fsl/6.0.2            libz/1.2.8                 rstudio/1.2.1335
+   JHPCE_tools/1.0           (L)    gcc/5.5.0            mathematica/9.0.1          rstudio/1.2.1555
+   R/3.6.1                   (D)    gcc/6.3.0            mathematica/11.3  (D)      rstudio/1.2.5001   (D)
+   R/4.0.3                          gcc/9.1.0            matlab/R2013b              sas/9.3
+   afni/19.3.09                     gdal/2.1.1           matlab/R2017b              sas/9.4            (D)
+   anaconda/2019.03          (D)    gdal/3.0.1           matlab/R2019a     (L,D)    sge/8.1.9          (L,D)
+   anaconda/2020.11                 gdal/3.2.0    (D)    mpich/3.3                  sge/2011.11p1
+   aws/2.0.54                       git/2.17.0           openmpi/4.0.1              singularity/3.2.1  (D)
+   bcl2fastq/1.8.4                  git/2.23.0           pandoc/2.7.3               singularity/03.2.1
+   bcl2fastq/2.20            (D)    git/2.28.0    (D)    perl/5.24.4                singularity/3.6.0
+   binutils/2.32                    glpk/4.65            proj/5.2.0                 spm12/12
+   boost/1.44.0                     gnuplot/5.2.8        proj/6.1.1                 stata/13
+   cmake/3.14.5                     go/1.12.1            proj/7.2.0        (D)      stata/14
+   cmake/3.15.4              (D)    go/1.14.6     (D)    python/2.7.9               stata/15
+   conda/3.0                        hdf5/1.10.5          python/3.6.9               stata/16           (L,D)
+   conda/3-4.6.14            (D)    java/14.0.2          python/3.7.3      (D)      symphony/5.6.13
+   dcmtk/3.6.5                      julia/1.3.1          python/3.8.3               tex/2017
+   encfs/1.0                        libpng/1.6.37        qctool/2.0.7               zlib/1.2.11
+   ffmpeg/4.2.1                     libssh2/1.9.0        rstudio/0.98
+
+  Where:
+   L:  Module is loaded
+   D:  Default Module
+
+Use "module spider" to find all possible modules.
+Use "module keyword key1 key2 ..." to search for all possible modules matching any of the "keys".
+
+
+[compute-092 /users/sjahansi/bin/epacts/EPACTS]$ 
+[compute-092 /users/sjahansi/bin/epacts/EPACTS]$ module add R/3.6.1 
+[compute-092 /users/sjahansi/bin/epacts/EPACTS]$ ./configure --prefix=/users/sjahansi/bin/epacts/EPACTS
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /usr/bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking build system type... x86_64-unknown-linux-gnu
+checking host system type... x86_64-unknown-linux-gnu
+checking how to print strings... printf
+checking for style of include used by make... GNU
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking dependency style of gcc... gcc3
+checking for a sed that does not truncate output... /usr/bin/sed
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for egrep... /usr/bin/grep -E
+checking for fgrep... /usr/bin/grep -F
+checking for ld used by gcc... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 50331648
+checking how to convert x86_64-unknown-linux-gnu file names to x86_64-unknown-linux-gnu format... func_convert_file_noop
+checking how to convert x86_64-unknown-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for /usr/bin/ld option to reload object files... -r
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for ar... ar
+checking for archiver @FILE support... @
+checking for strip... strip
+checking for ranlib... ranlib
+checking command to parse /usr/bin/nm -B output from gcc object... ok
+checking for sysroot... no
+checking for a working dd... /usr/bin/dd
+checking how to truncate binary pipes... /usr/bin/dd bs=4096 count=1
+checking for mt... no
+checking if : is a manifest tool... no
+checking how to run the C preprocessor... gcc -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if gcc supports -fno-rtti -fno-exceptions... no
+checking for gcc option to produce PIC... -fPIC -DPIC
+checking if gcc PIC flag -fPIC -DPIC works... yes
+checking if gcc static flag -static works... no
+checking if gcc supports -c -o file.o... yes
+checking if gcc supports -c -o file.o... (cached) yes
+checking whether the gcc linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... yes
+checking for g++... g++
+checking whether we are using the GNU C++ compiler... yes
+checking whether g++ accepts -g... yes
+checking dependency style of g++... gcc3
+checking how to run the C++ preprocessor... g++ -E
+checking for ld used by g++... /usr/bin/ld -m elf_x86_64
+checking if the linker (/usr/bin/ld -m elf_x86_64) is GNU ld... yes
+checking whether the g++ linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking for g++ option to produce PIC... -fPIC -DPIC
+checking if g++ PIC flag -fPIC -DPIC works... yes
+checking if g++ static flag -static works... no
+checking if g++ supports -c -o file.o... yes
+checking if g++ supports -c -o file.o... (cached) yes
+checking whether the g++ linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking dynamic linker characteristics... (cached) GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking for gcc... (cached) gcc
+checking whether we are using the GNU C compiler... (cached) yes
+checking whether gcc accepts -g... (cached) yes
+checking for gcc option to accept ISO C89... (cached) none needed
+checking dependency style of gcc... (cached) gcc3
+checking limits.h usability... yes
+checking limits.h presence... yes
+checking for limits.h... yes
+checking stddef.h usability... yes
+checking stddef.h presence... yes
+checking for stddef.h... yes
+checking for stdint.h... (cached) yes
+checking for stdlib.h... (cached) yes
+checking for string.h... (cached) yes
+checking for unistd.h... (cached) yes
+checking for stdbool.h that conforms to C99... yes
+checking for _Bool... yes
+checking for inline... inline
+checking for int32_t... yes
+checking for int64_t... yes
+checking for C/C++ restrict keyword... __restrict
+checking for size_t... yes
+checking for uint16_t... yes
+checking for uint32_t... yes
+checking for uint64_t... yes
+checking for uint8_t... yes
+checking for ptrdiff_t... yes
+checking for error_at_line... yes
+checking for stdlib.h... (cached) yes
+checking for GNU libc compatible malloc... yes
+checking whether sys/types.h defines makedev... yes
+checking for stdlib.h... (cached) yes
+checking for GNU libc compatible realloc... yes
+checking for working strtod... yes
+checking for floor... no
+checking for gethostname... yes
+checking for memset... yes
+checking for pow... no
+checking for select... yes
+checking for sqrt... no
+checking for strchr... yes
+checking for strstr... yes
+checking for strtol... yes
+checking for gzopen in -lz... yes
+checking for perl... yes
+checking for gs... yes
+checking for Rscript... yes
+checking for R... yes
+checking for grep... yes
+checking for mv... yes
+checking for rm... yes
+checking for make... yes
+checking for cat... yes
+checking for cut... yes
+checking for dirname... yes
+checking for head... yes
+checking for mkdir... yes
+checking for sort... yes
+checking for zcat... yes
+checking for groff... yes
+checking for pfbtops... yes
+checking for gnuplot... yes
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating src/Makefile
+config.status: creating scripts/Makefile
+config.status: creating data/Makefile
+config.status: creating config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+[compute-092 /users/sjahansi/bin/epacts/EPACTS]$ make 
+make  all-recursive
+make[1]: Entering directory `/users/sjahansi/bin/epacts/EPACTS'
+Making all in src
+make[2]: Entering directory `/users/sjahansi/bin/epacts/EPACTS/src'
+gcc -DHAVE_CONFIG_H -I. -I..  -Wall -fpic -O2    -g -O2 -MT bedidx.o -MD -MP -MF .deps/bedidx.Tpo -c -o bedidx.o bedidx.c
+mv -f .deps/bedidx.Tpo .deps/bedidx.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -Wall -fpic -O2    -g -O2 -MT bgzf.o -MD -MP -MF .deps/bgzf.Tpo -c -o bgzf.o bgzf.c
+bgzf.c: In function ‘bgzf_close’:
+bgzf.c:435:11: warning: variable ‘count’ set but not used [-Wunused-but-set-variable]
+  int ret, count, block_length;
+           ^
+mv -f .deps/bgzf.Tpo .deps/bgzf.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -Wall -fpic -O2    -g -O2 -MT knetfile.o -MD -MP -MF .deps/knetfile.Tpo -c -o knetfile.o knetfile.c
+mv -f .deps/knetfile.Tpo .deps/knetfile.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -Wall -fpic -O2    -g -O2 -MT kstring.o -MD -MP -MF .deps/kstring.Tpo -c -o kstring.o kstring.c
+mv -f .deps/kstring.Tpo .deps/kstring.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -Wall -fpic -O2    -g -O2 -MT index.o -MD -MP -MF .deps/index.Tpo -c -o index.o index.c
+mv -f .deps/index.Tpo .deps/index.Po
+rm -f libtabix.a
+ar cru libtabix.a bedidx.o bgzf.o knetfile.o kstring.o index.o 
+ranlib libtabix.a
+g++ -DHAVE_CONFIG_H -I. -I..  -Wall -fpic -O2    -g -O2 -MT pEmmax.o -MD -MP -MF .deps/pEmmax.Tpo -c -o pEmmax.o pEmmax.cpp
+mv -f .deps/pEmmax.Tpo .deps/pEmmax.Po
+g++ -DHAVE_CONFIG_H -I. -I..  -Wall -fpic -O2    -g -O2 -MT Parameters.o -MD -MP -MF .deps/Parameters.Tpo -c -o Parameters.o Parameters.cpp
+mv -f .deps/Parameters.Tpo .deps/Parameters.Po
+g++ -DHAVE_CONFIG_H -I. -I..  -Wall -fpic -O2    -g -O2 -MT Error.o -MD -MP -MF .deps/Error.Tpo -c -o Error.o Error.cpp
+mv -f .deps/Error.Tpo .deps/Error.Po
+g++ -DHAVE_CONFIG_H -I. -I..  -Wall -fpic -O2    -g -O2 -MT PhredHelper.o -MD -MP -MF .deps/PhredHelper.Tpo -c -o PhredHelper.o PhredHelper.cpp
+mv -f .deps/PhredHelper.Tpo .deps/PhredHelper.Po
+g++ -DHAVE_CONFIG_H -I. -I..  -Wall -fpic -O2    -g -O2 -MT codonHelper.o -MD -MP -MF .deps/codonHelper.Tpo -c -o codonHelper.o codonHelper.cpp
+mv -f .deps/codonHelper.Tpo .deps/codonHelper.Po
+/bin/sh ../libtool  --tag=CXX   --mode=link g++  -g -O2   -o pEmmax pEmmax.o Parameters.o Error.o PhredHelper.o codonHelper.o libtabix.a -lz 
+libtool: link: g++ -g -O2 -o pEmmax pEmmax.o Parameters.o Error.o PhredHelper.o codonHelper.o   libtabix.a -lz
+g++ -DHAVE_CONFIG_H -I. -I..  -Wall -fpic -O2    -g -O2 -MT vcfast.o -MD -MP -MF .deps/vcfast.Tpo -c -o vcfast.o vcfast.cpp
+mv -f .deps/vcfast.Tpo .deps/vcfast.Po
+g++ -DHAVE_CONFIG_H -I. -I..  -Wall -fpic -O2    -g -O2 -MT genomePosition.o -MD -MP -MF .deps/genomePosition.Tpo -c -o genomePosition.o genomePosition.cpp
+mv -f .deps/genomePosition.Tpo .deps/genomePosition.Po
+/bin/sh ../libtool  --tag=CXX   --mode=link g++  -g -O2   -o vcfast vcfast.o Error.o PhredHelper.o Parameters.o codonHelper.o genomePosition.o libtabix.a -lz 
+libtool: link: g++ -g -O2 -o vcfast vcfast.o Error.o PhredHelper.o Parameters.o codonHelper.o genomePosition.o   libtabix.a -lz
+g++ -DHAVE_CONFIG_H -I. -I..  -Wall -fpic -O2    -g -O2 -MT chaps.o -MD -MP -MF .deps/chaps.Tpo -c -o chaps.o chaps.cpp
+In file included from chaps.cpp:7:0:
+sparseHMM.h: In member function ‘void sparseHMM::selectEdges(int, int)’:
+sparseHMM.h:162:7: warning: ‘nrmv’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+       if ( nrmv > 0 ) {
+       ^
+mv -f .deps/chaps.Tpo .deps/chaps.Po
+/bin/sh ../libtool  --tag=CXX   --mode=link g++  -g -O2   -o chaps chaps.o Error.o PhredHelper.o Parameters.o libtabix.a -lz 
+libtool: link: g++ -g -O2 -o chaps chaps.o Error.o PhredHelper.o Parameters.o   libtabix.a -lz
+g++ -DHAVE_CONFIG_H -I. -I..  -Wall -fpic -O2    -g -O2 -MT Anno.o -MD -MP -MF .deps/Anno.Tpo -c -o Anno.o Anno.cpp
+In file included from Anno.cpp:22:0:
+Gene.h: In member function ‘bool Gene::isSpliceSite(int, int, int, bool*)’:
+Gene.h:393:5: warning: assuming signed overflow does not occur when assuming that (X + c) < X is always false [-Wstrict-overflow]
+     if (beg > end) {
+     ^
+Gene.h:393:5: warning: assuming signed overflow does not occur when assuming that (X - c) > X is always false [-Wstrict-overflow]
+     if (beg > end) {
+     ^
+mv -f .deps/Anno.Tpo .deps/Anno.Po
+g++ -DHAVE_CONFIG_H -I. -I..  -Wall -fpic -O2    -g -O2 -MT IO.o -MD -MP -MF .deps/IO.Tpo -c -o IO.o IO.cpp
+mv -f .deps/IO.Tpo .deps/IO.Po
+/bin/sh ../libtool  --tag=CXX   --mode=link g++  -g -O2   -o anno Anno.o IO.o libtabix.a -lz 
+libtool: link: g++ -g -O2 -o anno Anno.o IO.o   libtabix.a -lz
+gcc -DHAVE_CONFIG_H -I. -I..  -Wall -fpic -O2    -g -O2 -MT bgzip.o -MD -MP -MF .deps/bgzip.Tpo -c -o bgzip.o bgzip.c
+mv -f .deps/bgzip.Tpo .deps/bgzip.Po
+/bin/sh ../libtool  --tag=CC   --mode=link gcc  -g -O2   -o bgzip bgzip.o bedidx.o bgzf.o knetfile.o kstring.o  -lz 
+libtool: link: gcc -g -O2 -o bgzip bgzip.o bedidx.o bgzf.o knetfile.o kstring.o   -lz
+gcc -DHAVE_CONFIG_H -I. -I..  -Wall -fpic -O2    -g -O2 -MT tabix.o -MD -MP -MF .deps/tabix.Tpo -c -o tabix.o tabix.c
+mv -f .deps/tabix.Tpo .deps/tabix.Po
+/bin/sh ../libtool  --tag=CC   --mode=link gcc  -g -O2   -o tabix tabix.o bedidx.o bgzf.o knetfile.o kstring.o index.o  -lz 
+libtool: link: gcc -g -O2 -o tabix tabix.o bedidx.o bgzf.o knetfile.o kstring.o index.o   -lz
+make[2]: Leaving directory `/users/sjahansi/bin/epacts/EPACTS/src'
+Making all in data
+make[2]: Entering directory `/users/sjahansi/bin/epacts/EPACTS/data'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/users/sjahansi/bin/epacts/EPACTS/data'
+Making all in scripts
+make[2]: Entering directory `/users/sjahansi/bin/epacts/EPACTS/scripts'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/users/sjahansi/bin/epacts/EPACTS/scripts'
+make[2]: Entering directory `/users/sjahansi/bin/epacts/EPACTS'
+make[2]: Leaving directory `/users/sjahansi/bin/epacts/EPACTS'
+make[1]: Leaving directory `/users/sjahansi/bin/epacts/EPACTS'
+[compute-092 /users/sjahansi/bin/epacts/EPACTS]$ make install
+Making install in src
+make[1]: Entering directory `/users/sjahansi/bin/epacts/EPACTS/src'
+make[2]: Entering directory `/users/sjahansi/bin/epacts/EPACTS/src'
+ /usr/bin/mkdir -p '/users/sjahansi/bin/epacts/EPACTS/bin'
+  /bin/sh ../libtool   --mode=install /usr/bin/install -c pEmmax vcfast chaps anno bgzip tabix '/users/sjahansi/bin/epacts/EPACTS/bin'
+libtool: install: /usr/bin/install -c pEmmax /users/sjahansi/bin/epacts/EPACTS/bin/pEmmax
+libtool: install: /usr/bin/install -c vcfast /users/sjahansi/bin/epacts/EPACTS/bin/vcfast
+libtool: install: /usr/bin/install -c chaps /users/sjahansi/bin/epacts/EPACTS/bin/chaps
+libtool: install: /usr/bin/install -c anno /users/sjahansi/bin/epacts/EPACTS/bin/anno
+libtool: install: /usr/bin/install -c bgzip /users/sjahansi/bin/epacts/EPACTS/bin/bgzip
+libtool: install: /usr/bin/install -c tabix /users/sjahansi/bin/epacts/EPACTS/bin/tabix
+make[2]: Nothing to be done for `install-data-am'.
+make[2]: Leaving directory `/users/sjahansi/bin/epacts/EPACTS/src'
+make[1]: Leaving directory `/users/sjahansi/bin/epacts/EPACTS/src'
+Making install in data
+make[1]: Entering directory `/users/sjahansi/bin/epacts/EPACTS/data'
+make[2]: Entering directory `/users/sjahansi/bin/epacts/EPACTS/data'
+make[2]: Nothing to be done for `install-exec-am'.
+ /usr/bin/mkdir -p '/users/sjahansi/bin/epacts/EPACTS/share/EPACTS'
+ /usr/bin/install -c -m 644 epactsSingle.R epactsGroup.R epactsMulti.R mmSKAT_0.95.tar.gz group.b.collapse.R group.b.madsen.R group.q.reverse.R group.skat.R group.b.burden.R group.mmskat.R group.b.wcnt.R group.q.wilcox.R single.b.firth.R single.b.firthCov.R single.b.wald.R single.q.reverse.R single.b.spa2.R single.b.sna0.R single.b.sna2.R single.b.lrt.R single.q.linear.R single.q.wilcox.R single.q.lm.R single.b.score.R single.q.emmaxR.R multi.q.linear.R prologue.ps genetic_map_GRCh37_wgs.txt.gz genetic_map_GRCh37_wgs.txt.gz.tbi GillSansItalic.pfb GillSansMT.pfb hg19_refFlat.txt.gz hg19_refGene.txt.gz hg19_gencodeV7.txt.gz calibri.pfb arial.pfb 1000G_exome_chr20_example_softFiltered.calls.vcf.gz 1000G_exome_chr20_example_softFiltered.calls.vcf.gz.tbi 1000G_dummy_pheno.ped codon.txt '/users/sjahansi/bin/epacts/EPACTS/share/EPACTS'
+ /usr/bin/install -c -m 644 priority.txt epactsR_3.3.2.tar.gz wgEncodeBroadHmmGm12878HMM.bed.gz wgEncodeBroadHmmH1hescHMM.bed.gz.tbi wgEncodeBroadHmmHmecHMM.bed.gz wgEncodeBroadHmmHsmmHMM.bed.gz.tbi wgEncodeBroadHmmK562HMM.bed.gz wgEncodeBroadHmmNhekHMM.bed.gz.tbi wgEncodeBroadHmmGm12878HMM.bed.gz.tbi wgEncodeBroadHmmHepg2HMM.bed.gz wgEncodeBroadHmmHmecHMM.bed.gz.tbi wgEncodeBroadHmmHuvecHMM.bed.gz wgEncodeBroadHmmK562HMM.bed.gz.tbi wgEncodeBroadHmmNhlfHMM.bed.gz wgEncodeBroadHmmH1hescHMM.bed.gz wgEncodeBroadHmmHepg2HMM.bed.gz.tbi wgEncodeBroadHmmHsmmHMM.bed.gz wgEncodeBroadHmmHuvecHMM.bed.gz.tbi wgEncodeBroadHmmNhekHMM.bed.gz wgEncodeBroadHmmNhlfHMM.bed.gz.tbi hg19_gencodeV14.txt.gz '/users/sjahansi/bin/epacts/EPACTS/share/EPACTS'
+make[2]: Leaving directory `/users/sjahansi/bin/epacts/EPACTS/data'
+make[1]: Leaving directory `/users/sjahansi/bin/epacts/EPACTS/data'
+Making install in scripts
+make[1]: Entering directory `/users/sjahansi/bin/epacts/EPACTS/scripts'
+make[2]: Entering directory `/users/sjahansi/bin/epacts/EPACTS/scripts'
+ /usr/bin/mkdir -p '/users/sjahansi/bin/epacts/EPACTS/bin'
+ /usr/bin/install -c epacts epacts-single epacts-anno epacts-cat epacts-group epacts-make-group epacts-make-kin epacts-zoom epacts-multi epacts-cis-extract epacts-download epacts-plot epacts-pca-plot epacts-enrich epstopdf epacts.pm wGetOptions.pm test_run_epacts.sh '/users/sjahansi/bin/epacts/EPACTS/bin'
+make[2]: Nothing to be done for `install-data-am'.
+make[2]: Leaving directory `/users/sjahansi/bin/epacts/EPACTS/scripts'
+make[1]: Leaving directory `/users/sjahansi/bin/epacts/EPACTS/scripts'
+make[1]: Entering directory `/users/sjahansi/bin/epacts/EPACTS'
+make[2]: Entering directory `/users/sjahansi/bin/epacts/EPACTS'
+make  install-exec-hook
+make[3]: Entering directory `/users/sjahansi/bin/epacts/EPACTS'
+mkdir --p /users/sjahansi/bin/epacts/EPACTS/lib
+R CMD INSTALL -l /users/sjahansi/bin/epacts/EPACTS/lib /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/epactsR_3.3.2.tar.gz
+* installing *source* package ‘epactsR’ ...
+** using staged installation
+** libs
+make[4]: Entering directory `/tmp/RtmpIP2dW5/R.INSTALL1117523608b9/epactsR/src'
+g++ -std=gnu++11 -I"/jhpce/shared/jhpce/core/R/3.6.1/lib64/R/include" -DNDEBUG   -I/usr/local/include  -fpic  -g -O2  -c Error.cpp -o Error.o
+g++ -std=gnu++11 -I"/jhpce/shared/jhpce/core/R/3.6.1/lib64/R/include" -DNDEBUG   -I/usr/local/include  -fpic  -g -O2  -c PhredHelper.cpp -o PhredHelper.o
+gcc -std=gnu99 -I"/jhpce/shared/jhpce/core/R/3.6.1/lib64/R/include" -DNDEBUG   -I/usr/local/include  -fpic  -g -O2  -c adler32.c -o adler32.o
+gcc -std=gnu99 -I"/jhpce/shared/jhpce/core/R/3.6.1/lib64/R/include" -DNDEBUG   -I/usr/local/include  -fpic  -g -O2  -c bedidx.c -o bedidx.o
+gcc -std=gnu99 -I"/jhpce/shared/jhpce/core/R/3.6.1/lib64/R/include" -DNDEBUG   -I/usr/local/include  -fpic  -g -O2  -c bgzf.c -o bgzf.o
+gcc -std=gnu99 -I"/jhpce/shared/jhpce/core/R/3.6.1/lib64/R/include" -DNDEBUG   -I/usr/local/include  -fpic  -g -O2  -c compress.c -o compress.o
+gcc -std=gnu99 -I"/jhpce/shared/jhpce/core/R/3.6.1/lib64/R/include" -DNDEBUG   -I/usr/local/include  -fpic  -g -O2  -c crc32.c -o crc32.o
+gcc -std=gnu99 -I"/jhpce/shared/jhpce/core/R/3.6.1/lib64/R/include" -DNDEBUG   -I/usr/local/include  -fpic  -g -O2  -c deflate.c -o deflate.o
+g++ -std=gnu++11 -I"/jhpce/shared/jhpce/core/R/3.6.1/lib64/R/include" -DNDEBUG   -I/usr/local/include  -fpic  -g -O2  -c epacts.cpp -o epacts.o
+gcc -std=gnu99 -I"/jhpce/shared/jhpce/core/R/3.6.1/lib64/R/include" -DNDEBUG   -I/usr/local/include  -fpic  -g -O2  -c gzclose.c -o gzclose.o
+gcc -std=gnu99 -I"/jhpce/shared/jhpce/core/R/3.6.1/lib64/R/include" -DNDEBUG   -I/usr/local/include  -fpic  -g -O2  -c gzlib.c -o gzlib.o
+gzlib.c: In function ‘gz_open’:
+gzlib.c:250:9: warning: implicit declaration of function ‘lseek’ [-Wimplicit-function-declaration]
+         state->start = LSEEK(state->fd, 0, SEEK_CUR);
+         ^
+gcc -std=gnu99 -I"/jhpce/shared/jhpce/core/R/3.6.1/lib64/R/include" -DNDEBUG   -I/usr/local/include  -fpic  -g -O2  -c gzread.c -o gzread.o
+gzread.c: In function ‘gz_load’:
+gzread.c:30:9: warning: implicit declaration of function ‘read’ [-Wimplicit-function-declaration]
+         ret = read(state->fd, buf + *have, len - *have);
+         ^
+gzread.c: In function ‘gzclose_r’:
+gzread.c:586:5: warning: implicit declaration of function ‘close’ [-Wimplicit-function-declaration]
+     ret = close(state->fd);
+     ^
+gcc -std=gnu99 -I"/jhpce/shared/jhpce/core/R/3.6.1/lib64/R/include" -DNDEBUG   -I/usr/local/include  -fpic  -g -O2  -c gzwrite.c -o gzwrite.o
+gzwrite.c: In function ‘gz_comp’:
+gzwrite.c:84:9: warning: implicit declaration of function ‘write’ [-Wimplicit-function-declaration]
+         got = write(state->fd, strm->next_in, strm->avail_in);
+         ^
+gzwrite.c: In function ‘gzclose_w’:
+gzwrite.c:561:5: warning: implicit declaration of function ‘close’ [-Wimplicit-function-declaration]
+     if (close(state->fd) == -1)
+     ^
+gcc -std=gnu99 -I"/jhpce/shared/jhpce/core/R/3.6.1/lib64/R/include" -DNDEBUG   -I/usr/local/include  -fpic  -g -O2  -c index.c -o index.o
+gcc -std=gnu99 -I"/jhpce/shared/jhpce/core/R/3.6.1/lib64/R/include" -DNDEBUG   -I/usr/local/include  -fpic  -g -O2  -c infback.c -o infback.o
+gcc -std=gnu99 -I"/jhpce/shared/jhpce/core/R/3.6.1/lib64/R/include" -DNDEBUG   -I/usr/local/include  -fpic  -g -O2  -c inffast.c -o inffast.o
+gcc -std=gnu99 -I"/jhpce/shared/jhpce/core/R/3.6.1/lib64/R/include" -DNDEBUG   -I/usr/local/include  -fpic  -g -O2  -c inflate.c -o inflate.o
+gcc -std=gnu99 -I"/jhpce/shared/jhpce/core/R/3.6.1/lib64/R/include" -DNDEBUG   -I/usr/local/include  -fpic  -g -O2  -c inftrees.c -o inftrees.o
+gcc -std=gnu99 -I"/jhpce/shared/jhpce/core/R/3.6.1/lib64/R/include" -DNDEBUG   -I/usr/local/include  -fpic  -g -O2  -c knetfile.c -o knetfile.o
+gcc -std=gnu99 -I"/jhpce/shared/jhpce/core/R/3.6.1/lib64/R/include" -DNDEBUG   -I/usr/local/include  -fpic  -g -O2  -c kstring.c -o kstring.o
+gcc -std=gnu99 -I"/jhpce/shared/jhpce/core/R/3.6.1/lib64/R/include" -DNDEBUG   -I/usr/local/include  -fpic  -g -O2  -c trees.c -o trees.o
+gcc -std=gnu99 -I"/jhpce/shared/jhpce/core/R/3.6.1/lib64/R/include" -DNDEBUG   -I/usr/local/include  -fpic  -g -O2  -c uncompr.c -o uncompr.o
+gcc -std=gnu99 -I"/jhpce/shared/jhpce/core/R/3.6.1/lib64/R/include" -DNDEBUG   -I/usr/local/include  -fpic  -g -O2  -c zutil.c -o zutil.o
+g++ -std=gnu++11 -shared -L/jhpce/shared/jhpce/core/R/3.6.1/lib64/R/lib -L/usr/local/lib64 -o epactsR.so Error.o PhredHelper.o adler32.o bedidx.o bgzf.o compress.o crc32.o deflate.o epacts.o gzclose.o gzlib.o gzread.o gzwrite.o index.o infback.o inffast.o inflate.o inftrees.o knetfile.o kstring.o trees.o uncompr.o zutil.o -L/jhpce/shared/jhpce/core/R/3.6.1/lib64/R/lib -lR
+make[4]: Leaving directory `/tmp/RtmpIP2dW5/R.INSTALL1117523608b9/epactsR/src'
+installing to /users/sjahansi/bin/epacts/EPACTS/lib/00LOCK-epactsR/00new/epactsR/libs
+** help
+No man pages found in package  ‘epactsR’ 
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (epactsR)
+R CMD INSTALL -l /users/sjahansi/bin/epacts/EPACTS/lib /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/mmSKAT_0.95.tar.gz
+* installing *source* package ‘mmSKAT’ ...
+** using staged installation
+** libs
+make[4]: Entering directory `/tmp/RtmplU4FNe/R.INSTALL118f31456c33/mmSKAT/src'
+g++ -std=gnu++11 -I"/jhpce/shared/jhpce/core/R/3.6.1/lib64/R/include" -DNDEBUG   -I/usr/local/include  -fpic  -g -O2  -c NPsort.cpp -o NPsort.o
+g++ -std=gnu++11 -I"/jhpce/shared/jhpce/core/R/3.6.1/lib64/R/include" -DNDEBUG   -I/usr/local/include  -fpic  -g -O2  -c bed_reader.cpp -o bed_reader.o
+bed_reader.cpp: In constructor ‘BedFileReader::BedFileReader(char*, char*, char*, char*, int, int, int, int*, char*)’:
+bed_reader.cpp:261:34: warning: converting to non-pointer type ‘char’ from NULL [-Wconversion-null]
+   this->m_snp_sets[j].letters[0] = NULL;
+                                  ^
+bed_reader.cpp:262:34: warning: converting to non-pointer type ‘char’ from NULL [-Wconversion-null]
+   this->m_snp_sets[j].letters[1] = NULL;
+                                  ^
+bed_reader.cpp: In member function ‘void BedFileReader::read_data_and_create_mwo_used_hashtable(Hasht*, int*)’:
+bed_reader.cpp:397:43: warning: passing NULL to non-pointer argument 2 of ‘void* memset(void*, int, size_t)’ [-Wconversion-null]
+    memset(bits_val, NULL, sizeof(bits_val));
+                                           ^
+bed_reader.cpp: In member function ‘void BedFileReader::read_data_and_update_temp_file(int*)’:
+bed_reader.cpp:584:43: warning: passing NULL to non-pointer argument 2 of ‘void* memset(void*, int, size_t)’ [-Wconversion-null]
+    memset(bits_val, NULL, sizeof(bits_val));
+                                           ^
+g++ -std=gnu++11 -I"/jhpce/shared/jhpce/core/R/3.6.1/lib64/R/include" -DNDEBUG   -I/usr/local/include  -fpic  -g -O2  -c interface.cpp -o interface.o
+g++ -std=gnu++11 -I"/jhpce/shared/jhpce/core/R/3.6.1/lib64/R/include" -DNDEBUG   -I/usr/local/include  -fpic  -g -O2  -c interface_to_R.cpp -o interface_to_R.o
+gcc -std=gnu99 -I"/jhpce/shared/jhpce/core/R/3.6.1/lib64/R/include" -DNDEBUG   -I/usr/local/include  -fpic  -g -O2  -c kernel_func.c -o kernel_func.o
+g++ -std=gnu++11 -I"/jhpce/shared/jhpce/core/R/3.6.1/lib64/R/include" -DNDEBUG   -I/usr/local/include  -fpic  -g -O2  -c mwo_reader.cpp -o mwo_reader.o
+mwo_reader.cpp: In member function ‘void MwoFileReader::prepare_out_array_print_snpset_to_file(snpset*, int, int*, int, int, int*, char*)’:
+mwo_reader.cpp:395:43: warning: passing NULL to non-pointer argument 2 of ‘void* memset(void*, int, size_t)’ [-Wconversion-null]
+    memset(bits_val, NULL, sizeof(bits_val));
+                                           ^
+g++ -std=gnu++11 -I"/jhpce/shared/jhpce/core/R/3.6.1/lib64/R/include" -DNDEBUG   -I/usr/local/include  -fpic  -g -O2  -c qfc.cpp -o qfc.o
+gcc -std=gnu99 -I"/jhpce/shared/jhpce/core/R/3.6.1/lib64/R/include" -DNDEBUG   -I/usr/local/include  -fpic  -g -O2  -c resampling.c -o resampling.o
+g++ -std=gnu++11 -I"/jhpce/shared/jhpce/core/R/3.6.1/lib64/R/include" -DNDEBUG   -I/usr/local/include  -fpic  -g -O2  -c set_bed_merge_main.cpp -o set_bed_merge_main.o
+g++ -std=gnu++11 -I"/jhpce/shared/jhpce/core/R/3.6.1/lib64/R/include" -DNDEBUG   -I/usr/local/include  -fpic  -g -O2  -c setid_bim_index.cpp -o setid_bim_index.o
+setid_bim_index.cpp: In member function ‘void Hasht::upload_snpid_from_bim(int*)’:
+setid_bim_index.cpp:271:34: warning: converting to non-pointer type ‘char’ from NULL [-Wconversion-null]
+   this->m_snp_sets[j].letters[0] = NULL;
+                                  ^
+setid_bim_index.cpp:272:34: warning: converting to non-pointer type ‘char’ from NULL [-Wconversion-null]
+   this->m_snp_sets[j].letters[1] = NULL;
+                                  ^
+g++ -std=gnu++11 -shared -L/jhpce/shared/jhpce/core/R/3.6.1/lib64/R/lib -L/usr/local/lib64 -o mmSKAT.so NPsort.o bed_reader.o interface.o interface_to_R.o kernel_func.o mwo_reader.o qfc.o resampling.o set_bed_merge_main.o setid_bim_index.o -L/jhpce/shared/jhpce/core/R/3.6.1/lib64/R/lib -lR
+make[4]: Leaving directory `/tmp/RtmplU4FNe/R.INSTALL118f31456c33/mmSKAT/src'
+installing to /users/sjahansi/bin/epacts/EPACTS/lib/00LOCK-mmSKAT/00new/mmSKAT/libs
+** R
+** data
+** byte-compile and prepare package for lazy loading
+** help
+No man pages found in package  ‘mmSKAT’ 
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (mmSKAT)
+make[3]: Leaving directory `/users/sjahansi/bin/epacts/EPACTS'
+make[2]: Nothing to be done for `install-data-am'.
+make[2]: Leaving directory `/users/sjahansi/bin/epacts/EPACTS'
+make[1]: Leaving directory `/users/sjahansi/bin/epacts/EPACTS'
+[compute-092 /users/sjahansi/bin/epacts/EPACTS]$ ls
+aclocal.m4      config.h      config.status             configure.ac  lib        m4           missing    src
+autom4te.cache  config.h.in   config.sub                data          libtool    Makefile     README.md  stamp-h1
+bin             config.h.in~  configure                 depcomp       LICENSE    Makefile.am  scripts
+config.guess    config.log    configure-19062018-1_log  install-sh    ltmain.sh  Makefile.in  share
+[compute-092 /users/sjahansi/bin/epacts/EPACTS]$ ./epacts version
+-bash: ./epacts: No such file or directory
+[compute-092 /users/sjahansi/bin/epacts/EPACTS]$ cd bin
+[compute-092 /users/sjahansi/bin/epacts/EPACTS/bin]$ ls
+anno   epacts       epacts-cis-extract  epacts-group       epacts-multi     epacts.pm      epstopdf  test_run_epacts.sh
+bgzip  epacts-anno  epacts-download     epacts-make-group  epacts-pca-plot  epacts-single  pEmmax    vcfast
+chaps  epacts-cat   epacts-enrich       epacts-make-kin    epacts-plot      epacts-zoom    tabix     wGetOptions.pm
+[compute-092 /users/sjahansi/bin/epacts/EPACTS/bin]$ ./test_run_epacts.sh
+Performing EPACTS Binary Single Variant Score Test..
+ERROR: Cannot find FASTA reference file /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/human_g1k_v37.fasta or /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/human_g1k_v37.fasta.fai. Please specify the correct FASTA file or turn off the --anno option
+[compute-092 /users/sjahansi/bin/epacts/EPACTS/bin]$ ./epacts-download 
+Connecting to ftp.1000genomes.ebi.ac.uk
+Downloading human_g1k_v37.fasta.fai..
+Moving human_g1k_v37.fasta.fai to /users/sjahansi/bin/epacts/EPACTS/bin/..//share/EPACTS/
+Downloading human_g1k_v37.fasta.gz.. Please be patient. This will take a while
+Moving human_g1k_v37.fasta.gz to /users/sjahansi/bin/epacts/EPACTS/bin/..//share/EPACTS/
+Decompressing the file
+gzip -d /users/sjahansi/bin/epacts/EPACTS/bin/..//share/EPACTS/human_g1k_v37.fasta.gz
+
+gzip: /users/sjahansi/bin/epacts/EPACTS/bin/..//share/EPACTS/human_g1k_v37.fasta.gz: decompression OK, trailing garbage ignored
+Successfully installed the reference FASTA file
+[compute-092 /users/sjahansi/bin/epacts/EPACTS/bin]$ ./test_run_epacts.sh
+Performing EPACTS Binary Single Variant Score Test..
+Detected phenotypes with 2 unique values - 1 and 2 - considering them as binary phenotypes... re-encoding them into 1 and 2
+Successfully written phenotypes and 2 covariates across 266 individuals
+Processing chromosome 20...
+Finished generating EPACTS Makefile
+Running 5 parallel jobs of EPACTS
+forkExecWait(): make -f /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.Makefile -j 5
+Rscript /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/epactsSingle.R --vanilla /users/sjahansi/bin/epacts/EPACTS /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.phe /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.cov /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.ind /users/sjahansi/bin/epacts/EPACTS/bin/./../share/EPACTS/1000G_exome_chr20_example_softFiltered.calls.vcf.gz 20:1-10000000 /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.1.10000000.epacts GT 0.001 1 3 1000000000 0.5 0 FALSE single.b.score
+Rscript /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/epactsSingle.R --vanilla /users/sjahansi/bin/epacts/EPACTS /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.phe /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.cov /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.ind /users/sjahansi/bin/epacts/EPACTS/bin/./../share/EPACTS/1000G_exome_chr20_example_softFiltered.calls.vcf.gz 20:10000001-20000000 /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.10000001.20000000.epacts GT 0.001 1 3 1000000000 0.5 0 FALSE single.b.score
+Rscript /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/epactsSingle.R --vanilla /users/sjahansi/bin/epacts/EPACTS /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.phe /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.cov /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.ind /users/sjahansi/bin/epacts/EPACTS/bin/./../share/EPACTS/1000G_exome_chr20_example_softFiltered.calls.vcf.gz 20:20000001-30000000 /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.20000001.30000000.epacts GT 0.001 1 3 1000000000 0.5 0 FALSE single.b.score
+Rscript /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/epactsSingle.R --vanilla /users/sjahansi/bin/epacts/EPACTS /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.phe /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.cov /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.ind /users/sjahansi/bin/epacts/EPACTS/bin/./../share/EPACTS/1000G_exome_chr20_example_softFiltered.calls.vcf.gz 20:30000001-40000000 /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.30000001.40000000.epacts GT 0.001 1 3 1000000000 0.5 0 FALSE single.b.score
+Rscript /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/epactsSingle.R --vanilla /users/sjahansi/bin/epacts/EPACTS /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.phe /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.cov /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.ind /users/sjahansi/bin/epacts/EPACTS/bin/./../share/EPACTS/1000G_exome_chr20_example_softFiltered.calls.vcf.gz 20:40000001-50000000 /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.40000001.50000000.epacts GT 0.001 1 3 1000000000 0.5 0 FALSE single.b.score
+Loading required package: epactsR
+Loading required package: epactsR
+Loading required package: epactsR
+Loading required package: epactsR
+Loading required package: epactsR
+NULL
+Sucessfully wrote ( 1248 * 10 ) matrix
+NULL
+/users/sjahansi/bin/epacts/EPACTS/bin/epacts-anno --in /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.10000001.20000000.epacts --ref /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/human_g1k_v37.fasta
+NULL
+Sucessfully wrote ( 1466 * 10 ) matrix
+NULL
+/users/sjahansi/bin/epacts/EPACTS/bin/epacts-anno --in /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.20000001.30000000.epacts --ref /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/human_g1k_v37.fasta
+/users/sjahansi/bin/epacts/EPACTS/bin/anno -i /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.10000001.20000000.epacts -r /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/human_g1k_v37.fasta -f refGene -g /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/hg19_gencodeV14.txt.gz -c /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/codon.txt -o /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.10000001.20000000.epacts.tmp --inputFormat epacts -p /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/priority.txt
+The following parameters are available.  Ones with "[]" are in effect:
+
+Available Options
+    Required Parameters :
+                          -i [/users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.10000001.20000000.epacts]
+                          -o [/users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.10000001.20000000.epacts.tmp]
+          Gene Annotation
+             Parameters : -g [/users/sjahansi/bin/epacts/EPACTS/share/EPACTS/hg19_gencodeV14.txt.gz]
+                          -r [/users/sjahansi/bin/epacts/EPACTS/share/EPACTS/human_g1k_v37.fasta]
+                          --inputFormat [epacts], --checkReference, -f [refGene]
+                          -p [/users/sjahansi/bin/epacts/EPACTS/share/EPACTS/priority.txt]
+                          -c [/users/sjahansi/bin/epacts/EPACTS/share/EPACTS/codon.txt]
+                          -u [], -d [], --se [], --si [], --outputFormat []
+ Other Annotation Tools : --genomeScore [], --bed [], --tabix []
+Load reference genome /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/human_g1k_v37.fasta...
+DONE: 84 chromosomes and 3101804739 bases are loaded.
+Load codon file /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/codon.txt...
+DONE: codon file loaded.
+Load priority file /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/priority.txt...
+DONE: 24 priority annotation types loaded.
+Load gene file /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/hg19_gencodeV14.txt.gz...
+/users/sjahansi/bin/epacts/EPACTS/bin/anno -i /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.20000001.30000000.epacts -r /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/human_g1k_v37.fasta -f refGene -g /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/hg19_gencodeV14.txt.gz -c /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/codon.txt -o /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.20000001.30000000.epacts.tmp --inputFormat epacts -p /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/priority.txt
+The following parameters are available.  Ones with "[]" are in effect:
+
+Available Options
+    Required Parameters :
+                          -i [/users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.20000001.30000000.epacts]
+                          -o [/users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.20000001.30000000.epacts.tmp]
+          Gene Annotation
+             Parameters : -g [/users/sjahansi/bin/epacts/EPACTS/share/EPACTS/hg19_gencodeV14.txt.gz]
+                          -r [/users/sjahansi/bin/epacts/EPACTS/share/EPACTS/human_g1k_v37.fasta]
+                          --inputFormat [epacts], --checkReference, -f [refGene]
+                          -p [/users/sjahansi/bin/epacts/EPACTS/share/EPACTS/priority.txt]
+                          -c [/users/sjahansi/bin/epacts/EPACTS/share/EPACTS/codon.txt]
+                          -u [], -d [], --se [], --si [], --outputFormat []
+ Other Annotation Tools : --genomeScore [], --bed [], --tabix []
+Load reference genome /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/human_g1k_v37.fasta...
+DONE: 84 chromosomes and 3101804739 bases are loaded.
+Load codon file /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/codon.txt...
+DONE: codon file loaded.
+Load priority file /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/priority.txt...
+DONE: 24 priority annotation types loaded.
+Load gene file /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/hg19_gencodeV14.txt.gz...
+NULL
+Sucessfully wrote ( 3367 * 10 ) matrix
+NULL
+NULL
+/users/sjahansi/bin/epacts/EPACTS/bin/epacts-anno --in /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.1.10000000.epacts --ref /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/human_g1k_v37.fasta
+Sucessfully wrote ( 3662 * 10 ) matrix
+NULL
+/users/sjahansi/bin/epacts/EPACTS/bin/epacts-anno --in /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.40000001.50000000.epacts --ref /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/human_g1k_v37.fasta
+/users/sjahansi/bin/epacts/EPACTS/bin/anno -i /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.1.10000000.epacts -r /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/human_g1k_v37.fasta -f refGene -g /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/hg19_gencodeV14.txt.gz -c /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/codon.txt -o /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.1.10000000.epacts.tmp --inputFormat epacts -p /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/priority.txt
+The following parameters are available.  Ones with "[]" are in effect:
+
+Available Options
+    Required Parameters :
+                          -i [/users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.1.10000000.epacts]
+                          -o [/users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.1.10000000.epacts.tmp]
+          Gene Annotation
+             Parameters : -g [/users/sjahansi/bin/epacts/EPACTS/share/EPACTS/hg19_gencodeV14.txt.gz]
+                          -r [/users/sjahansi/bin/epacts/EPACTS/share/EPACTS/human_g1k_v37.fasta]
+                          --inputFormat [epacts], --checkReference, -f [refGene]
+                          -p [/users/sjahansi/bin/epacts/EPACTS/share/EPACTS/priority.txt]
+                          -c [/users/sjahansi/bin/epacts/EPACTS/share/EPACTS/codon.txt]
+                          -u [], -d [], --se [], --si [], --outputFormat []
+ Other Annotation Tools : --genomeScore [], --bed [], --tabix []
+Load reference genome /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/human_g1k_v37.fasta...
+DONE: 84 chromosomes and 3101804739 bases are loaded.
+Load codon file /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/codon.txt...
+DONE: codon file loaded.
+Load priority file /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/priority.txt...
+DONE: 24 priority annotation types loaded.
+Load gene file /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/hg19_gencodeV14.txt.gz...
+/users/sjahansi/bin/epacts/EPACTS/bin/anno -i /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.40000001.50000000.epacts -r /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/human_g1k_v37.fasta -f refGene -g /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/hg19_gencodeV14.txt.gz -c /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/codon.txt -o /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.40000001.50000000.epacts.tmp --inputFormat epacts -p /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/priority.txt
+NULL
+The following parameters are available.  Ones with "[]" are in effect:
+
+Available Options
+    Required Parameters :
+                          -i [/users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.40000001.50000000.epacts]
+                          -o [/users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.40000001.50000000.epacts.tmp]
+          Gene Annotation
+             Parameters : -g [/users/sjahansi/bin/epacts/EPACTS/share/EPACTS/hg19_gencodeV14.txt.gz]
+                          -r [/users/sjahansi/bin/epacts/EPACTS/share/EPACTS/human_g1k_v37.fasta]
+                          --inputFormat [epacts], --checkReference, -f [refGene]
+                          -p [/users/sjahansi/bin/epacts/EPACTS/share/EPACTS/priority.txt]
+                          -c [/users/sjahansi/bin/epacts/EPACTS/share/EPACTS/codon.txt]
+                          -u [], -d [], --se [], --si [], --outputFormat []
+ Other Annotation Tools : --genomeScore [], --bed [], --tabix []
+Load reference genome /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/human_g1k_v37.fasta...
+DONE: 84 chromosomes and 3101804739 bases are loaded.
+Load codon file /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/codon.txt...
+DONE: codon file loaded.
+Load priority file /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/priority.txt...
+DONE: 24 priority annotation types loaded.
+Load gene file /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/hg19_gencodeV14.txt.gz...
+Sucessfully wrote ( 4170 * 10 ) matrix
+NULL
+/users/sjahansi/bin/epacts/EPACTS/bin/epacts-anno --in /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.30000001.40000000.epacts --ref /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/human_g1k_v37.fasta
+/users/sjahansi/bin/epacts/EPACTS/bin/anno -i /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.30000001.40000000.epacts -r /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/human_g1k_v37.fasta -f refGene -g /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/hg19_gencodeV14.txt.gz -c /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/codon.txt -o /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.30000001.40000000.epacts.tmp --inputFormat epacts -p /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/priority.txt
+The following parameters are available.  Ones with "[]" are in effect:
+
+Available Options
+    Required Parameters :
+                          -i [/users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.30000001.40000000.epacts]
+                          -o [/users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.30000001.40000000.epacts.tmp]
+          Gene Annotation
+             Parameters : -g [/users/sjahansi/bin/epacts/EPACTS/share/EPACTS/hg19_gencodeV14.txt.gz]
+                          -r [/users/sjahansi/bin/epacts/EPACTS/share/EPACTS/human_g1k_v37.fasta]
+                          --inputFormat [epacts], --checkReference, -f [refGene]
+                          -p [/users/sjahansi/bin/epacts/EPACTS/share/EPACTS/priority.txt]
+                          -c [/users/sjahansi/bin/epacts/EPACTS/share/EPACTS/codon.txt]
+                          -u [], -d [], --se [], --si [], --outputFormat []
+ Other Annotation Tools : --genomeScore [], --bed [], --tabix []
+Load reference genome /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/human_g1k_v37.fasta...
+DONE: 84 chromosomes and 3101804739 bases are loaded.
+Load codon file /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/codon.txt...
+DONE: codon file loaded.
+Load priority file /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/priority.txt...
+DONE: 24 priority annotation types loaded.
+Load gene file /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/hg19_gencodeV14.txt.gz...
+DONE: 92627 gene loaded.
+DONE: 92627 gene loaded.
+DONE: Generated frequency of each annotype type in [ /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.10000001.20000000.epacts.tmp.anno.frq ].
+DONE: Generated frequency of each highest priority annotation type in [ /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.10000001.20000000.epacts.tmp.top.anno.frq ].
+Ts/Tv ratio: 2.87578
+Ts observed: 926  times; Tv observed: 322 times.
+DONE: Generated frequency of each base change in [ /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.10000001.20000000.epacts.tmp.base.frq ].
+DONE: Generated frequency of each codon change in [ /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.10000001.20000000.epacts.tmp.codon.frq ].
+DONE: Generated frequency of indel length in [ /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.10000001.20000000.epacts.tmp.indel.frq ].
+DONE: Generated frequency of each annotype type in [ /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.20000001.30000000.epacts.tmp.anno.frq ].
+DONE: Generated frequency of each highest priority annotation type in [ /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.20000001.30000000.epacts.tmp.top.anno.frq ].
+Ts/Tv ratio: 2.59314
+Ts observed: 1058  times; Tv observed: 408 times.
+DONE: Generated frequency of each base change in [ /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.20000001.30000000.epacts.tmp.base.frq ].
+DONE: Generated frequency of each codon change in [ /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.20000001.30000000.epacts.tmp.codon.frq ].
+DONE: Generated frequency of indel length in [ /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.20000001.30000000.epacts.tmp.indel.frq ].
+..............................................         
+ ...      Anno(tation)                       ...       
+  ...      Xiaowei Zhan, Goncalo Abecasis     ...      
+   ...      Speical Thanks:                    ...     
+    ...      Hyun Ming Kang, Yanming Li         ...    
+     ...      zhanxw@umich.edu                    ...  
+      ...      Sep 2011                            ... 
+       ................................................
+                                                       
+DONE: 1248 varaints are annotated.
+DONE: Generated annotation output in [ /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.10000001.20000000.epacts.tmp ].
+Annotation succeed!
+mv /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.10000001.20000000.epacts.tmp /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.10000001.20000000.epacts
+rm /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.10000001.20000000.epacts.tmp.log /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.10000001.20000000.epacts.tmp.top.anno.frq /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.10000001.20000000.epacts.tmp.anno.frq /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.10000001.20000000.epacts.tmp.base.frq /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.10000001.20000000.epacts.tmp.codon.frq /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.10000001.20000000.epacts.tmp.indel.frq
+..............................................         
+ ...      Anno(tation)                       ...       
+  ...      Xiaowei Zhan, Goncalo Abecasis     ...      
+   ...      Speical Thanks:                    ...     
+    ...      Hyun Ming Kang, Yanming Li         ...    
+     ...      zhanxw@umich.edu                    ...  
+      ...      Sep 2011                            ... 
+       ................................................
+                                                       
+DONE: 1466 varaints are annotated.
+DONE: Generated annotation output in [ /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.20000001.30000000.epacts.tmp ].
+Annotation succeed!
+mv /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.20000001.30000000.epacts.tmp /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.20000001.30000000.epacts
+rm /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.20000001.30000000.epacts.tmp.log /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.20000001.30000000.epacts.tmp.top.anno.frq /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.20000001.30000000.epacts.tmp.anno.frq /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.20000001.30000000.epacts.tmp.base.frq /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.20000001.30000000.epacts.tmp.codon.frq /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.20000001.30000000.epacts.tmp.indel.frq
+Rscript /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/epactsSingle.R --vanilla /users/sjahansi/bin/epacts/EPACTS /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.phe /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.cov /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.ind /users/sjahansi/bin/epacts/EPACTS/bin/./../share/EPACTS/1000G_exome_chr20_example_softFiltered.calls.vcf.gz 20:50000001-60000000 /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.50000001.60000000.epacts GT 0.001 1 3 1000000000 0.5 0 FALSE single.b.score
+Rscript /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/epactsSingle.R --vanilla /users/sjahansi/bin/epacts/EPACTS /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.phe /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.cov /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.ind /users/sjahansi/bin/epacts/EPACTS/bin/./../share/EPACTS/1000G_exome_chr20_example_softFiltered.calls.vcf.gz 20:60000001-63025520 /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.60000001.63025520.epacts GT 0.001 1 3 1000000000 0.5 0 FALSE single.b.score
+DONE: 92627 gene loaded.
+DONE: 92627 gene loaded.
+DONE: Generated frequency of each annotype type in [ /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.1.10000000.epacts.tmp.anno.frq ].
+DONE: Generated frequency of each highest priority annotation type in [ /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.1.10000000.epacts.tmp.top.anno.frq ].
+Ts/Tv ratio: 2.8524
+Ts observed: 2493  times; Tv observed: 874 times.
+DONE: Generated frequency of each base change in [ /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.1.10000000.epacts.tmp.base.frq ].
+DONE: Generated frequency of each codon change in [ /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.1.10000000.epacts.tmp.codon.frq ].
+DONE: Generated frequency of indel length in [ /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.1.10000000.epacts.tmp.indel.frq ].
+DONE: 92627 gene loaded.
+Loading required package: epactsR
+Loading required package: epactsR
+DONE: Generated frequency of each annotype type in [ /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.40000001.50000000.epacts.tmp.anno.frq ].
+DONE: Generated frequency of each highest priority annotation type in [ /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.40000001.50000000.epacts.tmp.top.anno.frq ].
+Ts/Tv ratio: 2.69153
+Ts observed: 2670  times; Tv observed: 992 times.
+DONE: Generated frequency of each base change in [ /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.40000001.50000000.epacts.tmp.base.frq ].
+DONE: Generated frequency of each codon change in [ /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.40000001.50000000.epacts.tmp.codon.frq ].
+DONE: Generated frequency of indel length in [ /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.40000001.50000000.epacts.tmp.indel.frq ].
+..............................................         
+ ...      Anno(tation)                       ...       
+  ...      Xiaowei Zhan, Goncalo Abecasis     ...      
+   ...      Speical Thanks:                    ...     
+    ...      Hyun Ming Kang, Yanming Li         ...    
+     ...      zhanxw@umich.edu                    ...  
+      ...      Sep 2011                            ... 
+       ................................................
+                                                       
+DONE: 3367 varaints are annotated.
+DONE: Generated annotation output in [ /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.1.10000000.epacts.tmp ].
+Annotation succeed!
+mv /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.1.10000000.epacts.tmp /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.1.10000000.epacts
+rm /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.1.10000000.epacts.tmp.log /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.1.10000000.epacts.tmp.top.anno.frq /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.1.10000000.epacts.tmp.anno.frq /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.1.10000000.epacts.tmp.base.frq /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.1.10000000.epacts.tmp.codon.frq /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.1.10000000.epacts.tmp.indel.frq
+..............................................         
+ ...      Anno(tation)                       ...       
+  ...      Xiaowei Zhan, Goncalo Abecasis     ...      
+   ...      Speical Thanks:                    ...     
+    ...      Hyun Ming Kang, Yanming Li         ...    
+     ...      zhanxw@umich.edu                    ...  
+      ...      Sep 2011                            ... 
+       ................................................
+                                                       
+DONE: 3662 varaints are annotated.
+DONE: Generated annotation output in [ /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.40000001.50000000.epacts.tmp ].
+Annotation succeed!
+mv /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.40000001.50000000.epacts.tmp /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.40000001.50000000.epacts
+DONE: Generated frequency of each annotype type in [ /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.30000001.40000000.epacts.tmp.anno.frq ].
+DONE: Generated frequency of each highest priority annotation type in [ /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.30000001.40000000.epacts.tmp.top.anno.frq ].
+Ts/Tv ratio: 2.90815
+Ts observed: 3103  times; Tv observed: 1067 times.
+DONE: Generated frequency of each base change in [ /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.30000001.40000000.epacts.tmp.base.frq ].
+DONE: Generated frequency of each codon change in [ /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.30000001.40000000.epacts.tmp.codon.frq ].
+DONE: Generated frequency of indel length in [ /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.30000001.40000000.epacts.tmp.indel.frq ].
+rm /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.40000001.50000000.epacts.tmp.log /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.40000001.50000000.epacts.tmp.top.anno.frq /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.40000001.50000000.epacts.tmp.anno.frq /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.40000001.50000000.epacts.tmp.base.frq /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.40000001.50000000.epacts.tmp.codon.frq /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.40000001.50000000.epacts.tmp.indel.frq
+..............................................         
+ ...      Anno(tation)                       ...       
+  ...      Xiaowei Zhan, Goncalo Abecasis     ...      
+   ...      Speical Thanks:                    ...     
+    ...      Hyun Ming Kang, Yanming Li         ...    
+     ...      zhanxw@umich.edu                    ...  
+      ...      Sep 2011                            ... 
+       ................................................
+                                                       
+DONE: 4170 varaints are annotated.
+DONE: Generated annotation output in [ /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.30000001.40000000.epacts.tmp ].
+Annotation succeed!
+mv /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.30000001.40000000.epacts.tmp /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.30000001.40000000.epacts
+rm /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.30000001.40000000.epacts.tmp.log /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.30000001.40000000.epacts.tmp.top.anno.frq /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.30000001.40000000.epacts.tmp.anno.frq /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.30000001.40000000.epacts.tmp.base.frq /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.30000001.40000000.epacts.tmp.codon.frq /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.30000001.40000000.epacts.tmp.indel.frq
+NULL
+Sucessfully wrote ( 1763 * 10 ) matrix
+NULL
+/users/sjahansi/bin/epacts/EPACTS/bin/epacts-anno --in /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.50000001.60000000.epacts --ref /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/human_g1k_v37.fasta
+/users/sjahansi/bin/epacts/EPACTS/bin/anno -i /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.50000001.60000000.epacts -r /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/human_g1k_v37.fasta -f refGene -g /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/hg19_gencodeV14.txt.gz -c /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/codon.txt -o /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.50000001.60000000.epacts.tmp --inputFormat epacts -p /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/priority.txt
+The following parameters are available.  Ones with "[]" are in effect:
+
+Available Options
+    Required Parameters :
+                          -i [/users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.50000001.60000000.epacts]
+                          -o [/users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.50000001.60000000.epacts.tmp]
+          Gene Annotation
+             Parameters : -g [/users/sjahansi/bin/epacts/EPACTS/share/EPACTS/hg19_gencodeV14.txt.gz]
+                          -r [/users/sjahansi/bin/epacts/EPACTS/share/EPACTS/human_g1k_v37.fasta]
+                          --inputFormat [epacts], --checkReference, -f [refGene]
+                          -p [/users/sjahansi/bin/epacts/EPACTS/share/EPACTS/priority.txt]
+                          -c [/users/sjahansi/bin/epacts/EPACTS/share/EPACTS/codon.txt]
+                          -u [], -d [], --se [], --si [], --outputFormat []
+ Other Annotation Tools : --genomeScore [], --bed [], --tabix []
+Load reference genome /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/human_g1k_v37.fasta...
+DONE: 84 chromosomes and 3101804739 bases are loaded.
+Load codon file /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/codon.txt...
+DONE: codon file loaded.
+Load priority file /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/priority.txt...
+DONE: 24 priority annotation types loaded.
+Load gene file /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/hg19_gencodeV14.txt.gz...
+NULL
+Sucessfully wrote ( 3425 * 10 ) matrix
+NULL
+/users/sjahansi/bin/epacts/EPACTS/bin/epacts-anno --in /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.60000001.63025520.epacts --ref /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/human_g1k_v37.fasta
+/users/sjahansi/bin/epacts/EPACTS/bin/anno -i /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.60000001.63025520.epacts -r /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/human_g1k_v37.fasta -f refGene -g /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/hg19_gencodeV14.txt.gz -c /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/codon.txt -o /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.60000001.63025520.epacts.tmp --inputFormat epacts -p /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/priority.txt
+The following parameters are available.  Ones with "[]" are in effect:
+
+Available Options
+    Required Parameters :
+                          -i [/users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.60000001.63025520.epacts]
+                          -o [/users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.60000001.63025520.epacts.tmp]
+          Gene Annotation
+             Parameters : -g [/users/sjahansi/bin/epacts/EPACTS/share/EPACTS/hg19_gencodeV14.txt.gz]
+                          -r [/users/sjahansi/bin/epacts/EPACTS/share/EPACTS/human_g1k_v37.fasta]
+                          --inputFormat [epacts], --checkReference, -f [refGene]
+                          -p [/users/sjahansi/bin/epacts/EPACTS/share/EPACTS/priority.txt]
+                          -c [/users/sjahansi/bin/epacts/EPACTS/share/EPACTS/codon.txt]
+                          -u [], -d [], --se [], --si [], --outputFormat []
+ Other Annotation Tools : --genomeScore [], --bed [], --tabix []
+Load reference genome /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/human_g1k_v37.fasta...
+DONE: 84 chromosomes and 3101804739 bases are loaded.
+Load codon file /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/codon.txt...
+DONE: codon file loaded.
+Load priority file /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/priority.txt...
+DONE: 24 priority annotation types loaded.
+Load gene file /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/hg19_gencodeV14.txt.gz...
+DONE: 92627 gene loaded.
+DONE: Generated frequency of each annotype type in [ /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.50000001.60000000.epacts.tmp.anno.frq ].
+DONE: Generated frequency of each highest priority annotation type in [ /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.50000001.60000000.epacts.tmp.top.anno.frq ].
+Ts/Tv ratio: 2.66528
+Ts observed: 1282  times; Tv observed: 481 times.
+DONE: Generated frequency of each base change in [ /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.50000001.60000000.epacts.tmp.base.frq ].
+DONE: Generated frequency of each codon change in [ /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.50000001.60000000.epacts.tmp.codon.frq ].
+DONE: Generated frequency of indel length in [ /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.50000001.60000000.epacts.tmp.indel.frq ].
+..............................................         
+ ...      Anno(tation)                       ...       
+  ...      Xiaowei Zhan, Goncalo Abecasis     ...      
+   ...      Speical Thanks:                    ...     
+    ...      Hyun Ming Kang, Yanming Li         ...    
+     ...      zhanxw@umich.edu                    ...  
+      ...      Sep 2011                            ... 
+       ................................................
+                                                       
+DONE: 1763 varaints are annotated.
+DONE: Generated annotation output in [ /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.50000001.60000000.epacts.tmp ].
+Annotation succeed!
+mv /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.50000001.60000000.epacts.tmp /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.50000001.60000000.epacts
+rm /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.50000001.60000000.epacts.tmp.log /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.50000001.60000000.epacts.tmp.top.anno.frq /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.50000001.60000000.epacts.tmp.anno.frq /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.50000001.60000000.epacts.tmp.base.frq /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.50000001.60000000.epacts.tmp.codon.frq /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.50000001.60000000.epacts.tmp.indel.frq
+DONE: 92627 gene loaded.
+DONE: Generated frequency of each annotype type in [ /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.60000001.63025520.epacts.tmp.anno.frq ].
+DONE: Generated frequency of each highest priority annotation type in [ /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.60000001.63025520.epacts.tmp.top.anno.frq ].
+Ts/Tv ratio: 3.97097
+Ts observed: 2736  times; Tv observed: 689 times.
+DONE: Generated frequency of each base change in [ /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.60000001.63025520.epacts.tmp.base.frq ].
+DONE: Generated frequency of each codon change in [ /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.60000001.63025520.epacts.tmp.codon.frq ].
+DONE: Generated frequency of indel length in [ /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.60000001.63025520.epacts.tmp.indel.frq ].
+..............................................         
+ ...      Anno(tation)                       ...       
+  ...      Xiaowei Zhan, Goncalo Abecasis     ...      
+   ...      Speical Thanks:                    ...     
+    ...      Hyun Ming Kang, Yanming Li         ...    
+     ...      zhanxw@umich.edu                    ...  
+      ...      Sep 2011                            ... 
+       ................................................
+                                                       
+DONE: 3425 varaints are annotated.
+DONE: Generated annotation output in [ /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.60000001.63025520.epacts.tmp ].
+Annotation succeed!
+mv /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.60000001.63025520.epacts.tmp /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.60000001.63025520.epacts
+rm /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.60000001.63025520.epacts.tmp.log /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.60000001.63025520.epacts.tmp.top.anno.frq /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.60000001.63025520.epacts.tmp.anno.frq /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.60000001.63025520.epacts.tmp.base.frq /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.60000001.63025520.epacts.tmp.codon.frq /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.60000001.63025520.epacts.tmp.indel.frq
+/users/sjahansi/bin/epacts/EPACTS/bin/epacts-cat /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.1.10000000.epacts /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.10000001.20000000.epacts /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.20000001.30000000.epacts /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.30000001.40000000.epacts /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.40000001.50000000.epacts /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.50000001.60000000.epacts /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.60000001.63025520.epacts | /users/sjahansi/bin/epacts/EPACTS/bin/bgzip -c > /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.epacts.gz
+/users/sjahansi/bin/epacts/EPACTS/bin/tabix -f -pbed /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.epacts.gz
+rm -f /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.1.10000000.epacts /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.10000001.20000000.epacts /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.20000001.30000000.epacts /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.30000001.40000000.epacts /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.40000001.50000000.epacts /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.50000001.60000000.epacts /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.20.60000001.63025520.epacts
+/users/sjahansi/bin/epacts/EPACTS/bin/epacts-plot --in /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.epacts.gz --region 20:0
+nsnps = 3331
+Rscript /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.epacts.R --vanilla
+
+export GDFONTPATH=/users/sjahansi/bin/epacts/EPACTS/share/EPACTS; export GNUPLOT_FONTPATH=/users/sjahansi/bin/epacts/EPACTS/share/EPACTS; export GNUPLOT_PS_DIR=/users/sjahansi/bin/epacts/EPACTS/share/EPACTS; export PATH=$PATH:/users/sjahansi/bin/epacts/EPACTS/bin/; export GNUPLOT_PFBTOPFA="pfbtops %s"; gnuplot /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.epacts.cmd
+export GDFONTPATH=/users/sjahansi/bin/epacts/EPACTS/share/EPACTS; export GNUPLOT_FONTPATH=/users/sjahansi/bin/epacts/EPACTS/share/EPACTS; export GNUPLOT_PS_DIR=/users/sjahansi/bin/epacts/EPACTS/share/EPACTS; export PATH=$PATH:/users/sjahansi/bin/epacts/EPACTS/bin/; export GNUPLOT_PFBTOPFA="pfbtops %s"; /users/sjahansi/bin/epacts/EPACTS/bin/epstopdf /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.epacts.qq.eps
+export GDFONTPATH=/users/sjahansi/bin/epacts/EPACTS/share/EPACTS; export GNUPLOT_FONTPATH=/users/sjahansi/bin/epacts/EPACTS/share/EPACTS; export GNUPLOT_PS_DIR=/users/sjahansi/bin/epacts/EPACTS/share/EPACTS; export PATH=$PATH:/users/sjahansi/bin/epacts/EPACTS/bin/; export GNUPLOT_PFBTOPFA="pfbtops %s"; gnuplot /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.epacts.cmd
+export GDFONTPATH=/users/sjahansi/bin/epacts/EPACTS/share/EPACTS; export GNUPLOT_FONTPATH=/users/sjahansi/bin/epacts/EPACTS/share/EPACTS; export GNUPLOT_PS_DIR=/users/sjahansi/bin/epacts/EPACTS/share/EPACTS; export PATH=$PATH:/users/sjahansi/bin/epacts/EPACTS/bin/; export GNUPLOT_PFBTOPFA="pfbtops %s"; /users/sjahansi/bin/epacts/EPACTS/bin/epstopdf /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.epacts.mh.eps
+rm /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.epacts.cmd /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.epacts.qq.eps /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.epacts.mh.eps /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.epacts.*.dat
+zcat /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.epacts.gz | awk '$9 != "NA" { print $0 }' | sort -g -k 9 | head -n 5000 > /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.epacts.top5000
+/users/sjahansi/bin/epacts/EPACTS/bin/epacts-zoom --vcf /users/sjahansi/bin/epacts/EPACTS/bin/./../share/EPACTS/1000G_exome_chr20_example_softFiltered.calls.vcf.gz --prefix /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score --top 1 
+SNP ID : 20:1610894
+Examining +-300000 bp window
+Examining genomic region 20:1310894-1910894
+Index SNP's cM position is 5.854019
+Unextended interval is 20:1610894-1610894 (0 bps)
+Extending the intervals by .02 cM
+export GDFONTPATH=/users/sjahansi/bin/epacts/EPACTS/share/EPACTS; export GNUPLOT_FONTPATH=/users/sjahansi/bin/epacts/EPACTS/share/EPACTS; export GNUPLOT_PS_DIR=/users/sjahansi/bin/epacts/EPACTS/share/EPACTS; export PATH=$PATH:/users/sjahansi/bin/epacts/EPACTS/bin/; export GNUPLOT_PFBTOPFA="pfbtops %s"; gnuplot /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.zoom.20.1610894.cmd
+export GDFONTPATH=/users/sjahansi/bin/epacts/EPACTS/share/EPACTS; export GNUPLOT_FONTPATH=/users/sjahansi/bin/epacts/EPACTS/share/EPACTS; export GNUPLOT_PS_DIR=/users/sjahansi/bin/epacts/EPACTS/share/EPACTS; export PATH=$PATH:/users/sjahansi/bin/epacts/EPACTS/bin/; export GNUPLOT_PFBTOPFA="pfbtops %s"; /users/sjahansi/bin/epacts/EPACTS/bin/epstopdf /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.zoom.20.1610894.eps;
+touch /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.b.score.epacts.OK
+Creating Empirical Kinship matrix...
+Kinship : Processing chromosome 20...
+Finished generating EPACTS Makefile
+Running 5 parallel jobs of EPACTS
+make -f out/test.single.q.emmax.kinf.Makefile -j 5
+
+The following parameters are available.  Ones with "[]" are in effect:
+
+Available Options
+              Input Options : --vcf [./../share/EPACTS/1000G_exome_chr20_example_softFiltered.calls.vcf.gz],
+                              --indf [out/test.single.q.emmax.kinf.ind],
+                              --region [20:1-10000000], --unit [10000],
+                              --field [GT], --rule [], --ignoreFilter [ON]
+          Filtering Options : --weight [], --minMAF [0.01],
+                              --minCallRate [0.95], --minRSQ [0.00]
+   Empircial Kinship Method : --BN [ON], --IBS
+             Output Options : --out-kinf [out/test.single.q.emmax.kinf.20.1.10000000.kin],
+                              --raw [ON], --adj-diag, --cov, --verbose
+
+
+The following parameters are available.  Ones with "[]" are in effect:
+
+Available Options
+              Input Options : --vcf [./../share/EPACTS/1000G_exome_chr20_example_softFiltered.calls.vcf.gz],
+                              --indf [out/test.single.q.emmax.kinf.ind],
+                              --region [20:10000001-20000000], --unit [10000],
+                              --field [GT], --rule [], --ignoreFilter [ON]
+          Filtering Options : --weight [], --minMAF [0.01],
+                              --minCallRate [0.95], --minRSQ [0.00]
+   Empircial Kinship Method : --BN [ON], --IBS
+             Output Options : --out-kinf [out/test.single.q.emmax.kinf.20.10000001.20000000.kin],
+                              --raw [ON], --adj-diag, --cov, --verbose
+
+NOTICE - nInds = 266 : HG00096 ...
+
+The following parameters are available.  Ones with "[]" are in effect:
+NOTICE - nInds = 266 : HG00096 ...
+
+Available Options
+              Input Options : --vcf [./../share/EPACTS/1000G_exome_chr20_example_softFiltered.calls.vcf.gz],
+                              --indf [out/test.single.q.emmax.kinf.ind],
+                              --region [20:20000001-30000000], --unit [10000],
+                              --field [GT], --rule [], --ignoreFilter [ON]
+          Filtering Options : --weight [], --minMAF [0.01],
+                              --minCallRate [0.95], --minRSQ [0.00]
+   Empircial Kinship Method : --BN [ON], --IBS
+             Output Options : --out-kinf [out/test.single.q.emmax.kinf.20.20000001.30000000.kin],
+                              --raw [ON], --adj-diag, --cov, --verbose
+
+
+The following parameters are available.  Ones with "[]" are in effect:
+
+Available Options
+              Input Options : --vcf [./../share/EPACTS/1000G_exome_chr20_example_softFiltered.calls.vcf.gz],
+                              --indf [out/test.single.q.emmax.kinf.ind],
+                              --region [20:30000001-40000000], --unit [10000],
+                             NOTICE - nInds = 266 : HG00096 ...
+ --field [GT], --rule [], --ignoreFilter [ON]
+          Filtering Options : --weight [], --minMAF [0.01],
+                              --minCallRate [0.95], --minRSQ [0.00]
+   Empircial Kinship Method : --BN [ON], --IBS
+             Output Options : --out-kinf [out/test.single.q.emmax.kinf.20.30000001.40000000.kin],
+                              --raw [ON], --adj-diag, --cov, --verbose
+
+
+The following parameters are available.  Ones with "[]" are in effect:
+
+Available Options
+              Input Options : --vcf [./../share/EPACTS/1000G_exome_chr20_example_softFiltered.calls.vcf.gz],
+                              --indf [out/test.single.q.emmax.kinf.ind],
+                             NOTICE - nInds = 266 : HG00096 ...
+ --region [20:40000001-50000000], --unit [10000],
+                              --field [GT], --rule [], --ignoreFilter [ON]
+          Filtering Options : --weight [], --minMAF [0.01],
+                              --minCallRate [0.95], --minRSQ [0.00]
+   Empircial Kinship Method : --BN [ON], --IBS
+             Output Options : --out-kinf [out/test.single.q.emmax.kinf.20.40000001.50000000.kin],
+                              --raw [ON], --adj-diag, --cov, --verbose
+
+NOTICE - nInds = 266 : HG00096 ...
+NOTICE - Processing 1248 markers across 266 individuals...
+191 markers included
+NOTICE - Started writing kinship matrix into out/test.single.q.emmax.kinf.20.10000001.20000000.kin
+NOTICE - Allocating a memory of size 284112
+NOTICE - Finished writing kinship matrix into out/test.single.q.emmax.kinf.20.10000001.20000000.kin
+
+The following parameters are available.  Ones with "[]" are in effect:
+
+Available Options
+              Input Options : --vcf [./../share/EPACTS/1000G_exome_chr20_example_softFiltered.calls.vcf.gz],
+                              --indf [out/test.single.q.emmax.kinf.ind],
+                              --region [20:50000001-60000000], --unit [10000],
+                              --field [GT], --rule [], --ignoreFilter [ON]
+          Filtering Options : --weight [], --minMAF [0.01],
+                              --minCallRate [0.95], --minRSQ [0.00]
+   Empircial Kinship Method : --BN [ON], --IBS
+             Output Options : --out-kinf [out/test.single.q.emmax.kinf.20.50000001.60000000.kin],
+                              --raw [ON], --adj-diag, --cov, --verbose
+
+NOTICE - nInds = 266 : HG00096 ...
+NOTICE - Processing 1466 markers across 266 individuals...
+192 markers included
+NOTICE - Started writing kinship matrix into out/test.single.q.emmax.kinf.20.20000001.30000000.kin
+NOTICE - Allocating a memory of size 284112
+NOTICE - Finished writing kinship matrix into out/test.single.q.emmax.kinf.20.20000001.30000000.kin
+
+The following parameters are available.  Ones with "[]" are in effect:
+
+Available Options
+              Input Options : --vcf [./../share/EPACTS/1000G_exome_chr20_example_softFiltered.calls.vcf.gz],
+                              --indf [out/test.single.q.emmax.kinf.ind],
+                              --region [20:60000001-63025520], --unit [10000],
+                              --field [GT], --rule [], --ignoreFilter [ON]
+          Filtering Options : --weight [], --minMAF [0.01],
+                              --minCallRate [0.95], --minRSQ [0.00]
+   Empircial Kinship Method : --BN [ON], --IBS
+             Output Options : --out-kinf [out/test.single.q.emmax.kinf.20.60000001.63025520.kin],
+                              --raw [ON], --adj-diag, --cov, --verbose
+
+NOTICE - nInds = 266 : HG00096 ...
+NOTICE - Processing 1763 markers across 266 individuals...
+256 markers included
+NOTICE - Started writing kinship matrix into out/test.single.q.emmax.kinf.20.50000001.60000000.kin
+NOTICE - Allocating a memory of size 284112
+NOTICE - Finished writing kinship matrix into out/test.single.q.emmax.kinf.20.50000001.60000000.kin
+NOTICE - Processing 3367 markers across 266 individuals...
+582 markers included
+NOTICE - Started writing kinship matrix into out/test.single.q.emmax.kinf.20.1.10000000.kin
+NOTICE - Allocating a memory of size 284112
+NOTICE - Finished writing kinship matrix into out/test.single.q.emmax.kinf.20.1.10000000.kin
+NOTICE - Processing 3662 markers across 266 individuals...
+493 markers included
+NOTICE - Started writing kinship matrix into out/test.single.q.emmax.kinf.20.40000001.50000000.kin
+NOTICE - Allocating a memory of size 284112
+NOTICE - Finished writing kinship matrix into out/test.single.q.emmax.kinf.20.40000001.50000000.kin
+NOTICE - Processing 4170 markers across 266 individuals...
+442 markers included
+NOTICE - Started writing kinship matrix into out/test.single.q.emmax.kinf.20.30000001.40000000.kin
+NOTICE - Allocating a memory of size 284112
+NOTICE - Finished writing kinship matrix into out/test.single.q.emmax.kinf.20.30000001.40000000.kin
+NOTICE - Processing 3425 markers across 266 individuals...
+557 markers included
+NOTICE - Started writing kinship matrix into out/test.single.q.emmax.kinf.20.60000001.63025520.kin
+NOTICE - Allocating a memory of size 284112
+NOTICE - Finished writing kinship matrix into out/test.single.q.emmax.kinf.20.60000001.63025520.kin
+
+The following parameters are available.  Ones with "[]" are in effect:
+
+Available Options
+              Input Options : --raw, --cov
+   Empircial Kinship Method : --BN [ON], --IBS, --YV
+             Output Options : --out-kinf [out/test.single.q.emmax.kinf],
+                              --verbose
+
+NOTICE - Merging the following kinship matrices
+NOTICE - Allocating size 284088 bytes.. 
+
+NOTICE - Allocating size 284088 bytes.. 
+
+NOTICE - Allocating size 284088 bytes.. 
+
+NOTICE - Allocating size 284088 bytes.. 
+
+NOTICE - Allocating size 284088 bytes.. 
+
+NOTICE - Allocating size 284088 bytes.. 
+
+NOTICE - Allocating size 284088 bytes.. 
+
+NOTICE - Allocating a memory of size 284112
+/users/sjahansi/bin/epacts/EPACTS/bin/pEmmax gen-kin --vcf ./../share/EPACTS/1000G_exome_chr20_example_softFiltered.calls.vcf.gz --indf out/test.single.q.emmax.kinf.ind --region 20:1-10000000 --field GT --minMAF 0.01 --minCallRate 0.95 --out-kinf out/test.single.q.emmax.kinf.20.1.10000000.kin --raw --ignoreFilter
+/users/sjahansi/bin/epacts/EPACTS/bin/pEmmax gen-kin --vcf ./../share/EPACTS/1000G_exome_chr20_example_softFiltered.calls.vcf.gz --indf out/test.single.q.emmax.kinf.ind --region 20:10000001-20000000 --field GT --minMAF 0.01 --minCallRate 0.95 --out-kinf out/test.single.q.emmax.kinf.20.10000001.20000000.kin --raw --ignoreFilter
+/users/sjahansi/bin/epacts/EPACTS/bin/pEmmax gen-kin --vcf ./../share/EPACTS/1000G_exome_chr20_example_softFiltered.calls.vcf.gz --indf out/test.single.q.emmax.kinf.ind --region 20:20000001-30000000 --field GT --minMAF 0.01 --minCallRate 0.95 --out-kinf out/test.single.q.emmax.kinf.20.20000001.30000000.kin --raw --ignoreFilter
+/users/sjahansi/bin/epacts/EPACTS/bin/pEmmax gen-kin --vcf ./../share/EPACTS/1000G_exome_chr20_example_softFiltered.calls.vcf.gz --indf out/test.single.q.emmax.kinf.ind --region 20:30000001-40000000 --field GT --minMAF 0.01 --minCallRate 0.95 --out-kinf out/test.single.q.emmax.kinf.20.30000001.40000000.kin --raw --ignoreFilter
+/users/sjahansi/bin/epacts/EPACTS/bin/pEmmax gen-kin --vcf ./../share/EPACTS/1000G_exome_chr20_example_softFiltered.calls.vcf.gz --indf out/test.single.q.emmax.kinf.ind --region 20:40000001-50000000 --field GT --minMAF 0.01 --minCallRate 0.95 --out-kinf out/test.single.q.emmax.kinf.20.40000001.50000000.kin --raw --ignoreFilter
+/users/sjahansi/bin/epacts/EPACTS/bin/pEmmax gen-kin --vcf ./../share/EPACTS/1000G_exome_chr20_example_softFiltered.calls.vcf.gz --indf out/test.single.q.emmax.kinf.ind --region 20:50000001-60000000 --field GT --minMAF 0.01 --minCallRate 0.95 --out-kinf out/test.single.q.emmax.kinf.20.50000001.60000000.kin --raw --ignoreFilter
+/users/sjahansi/bin/epacts/EPACTS/bin/pEmmax gen-kin --vcf ./../share/EPACTS/1000G_exome_chr20_example_softFiltered.calls.vcf.gz --indf out/test.single.q.emmax.kinf.ind --region 20:60000001-63025520 --field GT --minMAF 0.01 --minCallRate 0.95 --out-kinf out/test.single.q.emmax.kinf.20.60000001.63025520.kin --raw --ignoreFilter
+/users/sjahansi/bin/epacts/EPACTS/bin/pEmmax merge-kin --out-kinf out/test.single.q.emmax.kinf out/test.single.q.emmax.kinf.20.1.10000000.kin out/test.single.q.emmax.kinf.20.10000001.20000000.kin out/test.single.q.emmax.kinf.20.20000001.30000000.kin out/test.single.q.emmax.kinf.20.30000001.40000000.kin out/test.single.q.emmax.kinf.20.40000001.50000000.kin out/test.single.q.emmax.kinf.20.50000001.60000000.kin out/test.single.q.emmax.kinf.20.60000001.63025520.kin
+out/test.single.q.emmax.kinf.20.1.10000000.kin
+out/test.single.q.emmax.kinf.20.10000001.20000000.kin
+out/test.single.q.emmax.kinf.20.20000001.30000000.kin
+out/test.single.q.emmax.kinf.20.30000001.40000000.kin
+out/test.single.q.emmax.kinf.20.40000001.50000000.kin
+out/test.single.q.emmax.kinf.20.50000001.60000000.kin
+out/test.single.q.emmax.kinf.20.60000001.63025520.kin
+rm -f out/test.single.q.emmax.kinf.20.1.10000000.kin out/test.single.q.emmax.kinf.20.10000001.20000000.kin out/test.single.q.emmax.kinf.20.20000001.30000000.kin out/test.single.q.emmax.kinf.20.30000001.40000000.kin out/test.single.q.emmax.kinf.20.40000001.50000000.kin out/test.single.q.emmax.kinf.20.50000001.60000000.kin out/test.single.q.emmax.kinf.20.60000001.63025520.kin
+Running EMMAX single variant test...
+Detected phenotypes with more than 3 unique values -- considering as quantitative phenotypes.
+Successfully written phenotypes and 2 covariates across 266 individuals
+Processing chromosome 20...
+Finished generating EPACTS Makefile
+Running 5 parallel jobs of EPACTS
+forkExecWait(): make -f /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.Makefile -j 5
+/users/sjahansi/bin/epacts/EPACTS/bin/pEmmax reml --phenof /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.phe --covf /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.cov --kinf /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.kinf --indf /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.ind --out-eigf /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.eigR --out-remlf /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.reml
+
+The following parameters are available.  Ones with "[]" are in effect:
+
+Available Options
+    Input Options : --phenof [/users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.phe],
+                    --covf [/users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.cov],
+                    --indf [/users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.ind],
+                    --no-intercept,
+                    --kinf [/users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.kinf],
+                    --normalize, --in-eigf []
+   Output Options : --out-eigf [/users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.eigR],
+                    --out-remlf [/users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.reml],
+                    --verbose
+
+NOTICE - Allocating size 284088 bytes.. 
+
+NOTICE - Reading kinship matrix /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.kinf with 266 IDs
+NOTICE - Finished loading phenotypes across 266 individuals with 3 covariates (including interception)
+NOTICE - Computing eigendecomposition of residual kinship matrix with size 266 x 266, predictor matrix 266 x 3
+NOTICE - Computing SVD of covariates (266 x 3) , n = 266
+NOTICE - Writing eigendecomposition of kinship matrix
+NOTICE - Allocating a memory of size 561792
+NOTICE - Computing REML
+/users/sjahansi/bin/epacts/EPACTS/bin/pEmmax assoc --vcf /users/sjahansi/bin/epacts/EPACTS/bin/./../share/EPACTS/1000G_exome_chr20_example_softFiltered.calls.vcf.gz --region 20:1-10000000 --phenof /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.phe --field GT --indf /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.ind --eigf /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.eigR --remlf /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.reml --out-assocf /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.1.10000000.epacts --minMAF 0.001 --maxMAF 1 --maxMAC 1000000000 --minRSQ 0 --minCallRate 0.5 --minMAC 3
+/users/sjahansi/bin/epacts/EPACTS/bin/pEmmax assoc --vcf /users/sjahansi/bin/epacts/EPACTS/bin/./../share/EPACTS/1000G_exome_chr20_example_softFiltered.calls.vcf.gz --region 20:10000001-20000000 --phenof /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.phe --field GT --indf /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.ind --eigf /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.eigR --remlf /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.reml --out-assocf /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.10000001.20000000.epacts --minMAF 0.001 --maxMAF 1 --maxMAC 1000000000 --minRSQ 0 --minCallRate 0.5 --minMAC 3
+
+The following parameters are available.  Ones with "[]" are in effect:
+
+Available Options
+     VCF Input Options : --vcf [/users/sjahansi/bin/epacts/EPACTS/bin/./../share/EPACTS/1000G_exome_chr20_example_softFiltered.calls.vcf.gz],
+                         --region [20:1-10000000], --unit [10000],
+                         --indf [/users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.ind],
+                         --field [GT], --rule [], --minMAF [1.0e-03],
+                         --maxMAF [1.00], --minMAC [3], --maxMAC [1000000000],
+                         --minCallRate [0.50], --minRSQ [0.00], --ignoreFilter
+   Other Input Options : --phenof [/users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.phe],
+                         --eigf [/users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.eigR],
+                         --remlf [/users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.reml]
+        Output Options : --out-assocf [/users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.1.10000000.epacts],
+                         --verbose
+
+/users/sjahansi/bin/epacts/EPACTS/bin/pEmmax assoc --vcf /users/sjahansi/bin/epacts/EPACTS/bin/./../share/EPACTS/1000G_exome_chr20_example_softFiltered.calls.vcf.gz --region 20:20000001-30000000 --phenof /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.phe --field GT --indf /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.ind --eigf /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.eigR --remlf /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.reml --out-assocf /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.20000001.30000000.epacts --minMAF 0.001 --maxMAF 1 --maxMAC 1000000000 --minRSQ 0 --minCallRate 0.5 --minMAC 3
+
+The following parameters are available.  Ones with "[]" are in effect:
+
+Available Options
+     VCF Input Options : --vcf [/users/sjahansi/bin/epacts/EPACTS/bin/./../share/EPACTS/1000G_exome_chr20_example_softFiltered.calls.vcf.gz],
+                         --region [20:10000001-20000000], --unit [10000],
+                        NOTICE - Reading eigenvectors
+ --indf [/users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.ind],
+                         --field [GT], --rule [], --minMAF [1.0e-03],
+                         --maxMAF [1.00], --minMAC [3], --maxMAC [1000000000],
+                        NOTICE - Allocating a size 70221 bytes
+
+ --minCallRate [0.50], --minRSQ [0.00], --ignoreFilter
+   Other Input Options : --phenof [/users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.phe],
+                         --eigf [/users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.eigR],
+                         --remlf [/users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.reml]
+        Output Options : --out-assocf [/users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.10000001.20000000.epacts],
+                         --verbose
+
+NOTICE - Finished loading phenotypes across 266 individuals with 1 covariates (including interception)
+/users/sjahansi/bin/epacts/EPACTS/bin/pEmmax assoc --vcf /users/sjahansi/bin/epacts/EPACTS/bin/./../share/EPACTS/1000G_exome_chr20_example_softFiltered.calls.vcf.gz --region 20:30000001-40000000 --phenof /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.phe --field GT --indf /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.ind --eigf /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.eigR --remlf /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.reml --out-assocf /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.30000001.40000000.epacts --minMAF 0.001 --maxMAF 1 --maxMAC 1000000000 --minRSQ 0 --minCallRate 0.5 --minMAC 3
+NOTICE - Reading delta = 50.118679
+NOTICE - Reading eigenvectors
+
+The following parameters are available.  Ones with "[]" are in effect:
+
+Available Options
+NOTICE - Allocating a size 70221 bytes
+
+     VCF Input Options : --vcf [/users/sjahansi/bin/epacts/EPACTS/bin/./../share/EPACTS/1000G_exome_chr20_example_softFiltered.calls.vcf.gz],
+                         --region [20:20000001-30000000], --unit [10000],
+                         --indf [/users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.ind],
+                         --field [GT]NOTICE - Finished loading phenotypes across 266 individuals with 1 covariates (including interception)
+, --rule [], --minMAF [1.0e-03],
+                         --maxMAF [1.00], --minMAC [3], --maxMAC [1000000000],
+                        NOTICE - Reading delta = 50.118679
+ --minCallRate [0.50], --minRSQ [0.00], --ignoreFilter
+   Other Input Options : --phenof [/users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.phe],
+                         --eigf [/users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.eigR],
+                         --remlf [/users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.reml]
+        Output Options : --out-assocf [/users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.20000001.30000000.epacts],
+                         --verbose
+
+/users/sjahansi/bin/epacts/EPACTS/bin/pEmmax assoc --vcf /users/sjahansi/bin/epacts/EPACTS/bin/./../share/EPACTS/1000G_exome_chr20_example_softFiltered.calls.vcf.gz --region 20:40000001-50000000 --phenof /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.phe --field GT --indf /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.ind --eigf /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.eigR --remlf /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.reml --out-assocf /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.40000001.50000000.epacts --minMAF 0.001 --maxMAF 1 --maxMAC 1000000000 --minRSQ 0 --minCallRate 0.5 --minMAC 3
+
+The following parameters are available.  Ones with "[]" are in effect:
+
+Available Options
+     VCF Input Options : --vcf [/users/sjahansi/bin/epacts/EPACTS/bin/./../share/EPACTS/1000G_exome_chr20_example_softFiltered.calls.vcf.gz],
+                         --region [20:30000001-40000000], --unit [10000],
+                         --indf [/users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.ind],
+                         --field [GT], --rule [], --minMAF [1.0e-03]NOTICE - Reading eigenvectors
+,
+                         --maxMAF [1.00], --minMAC [3], --maxMAC [1000000000],
+                         --minCallRate [0.50], --minRSQ [0.00], --ignoreFilter
+   Other Input Options :NOTICE - Allocating a size 70221 bytes
+
+ --phenof [/users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.phe],
+                         --eigf [/users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.eigR],
+                         --remlf [/users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.reml]
+        Output Options : --out-assocf [/users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.30000001.40000000.epacts],
+                         --verbose
+
+NOTICE - Finished loading phenotypes across 266 individuals with 1 covariates (including interception)
+NOTICE - Reading delta = 50.118679
+NOTICE - Reading eigenvectors
+
+The following parameters are available.  Ones with "[]" are in effect:
+
+Available Options
+     VCF Input Options : --vcf [/users/sjahansi/bin/epacts/EPACTS/bin/./../share/EPACTS/1000G_exome_chr20_example_softFiltered.calls.vcf.gz],
+                         --region [20:40000001-50000000], --unit [10000],
+                         --indf [/users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.ind]NOTICE - Allocating a size 70221 bytes
+
+,
+                         --field [GT], --rule [], --minMAF [1.0e-03],
+                         --maxMAF [1.00], --minMAC [3], --maxMAC [1000000000],
+                         --minCallRate [0.50], --minRSQ [0.00], --ignoreFilter
+   Other Input Options :NOTICE - Finished loading phenotypes across 266 individuals with 1 covariates (including interception)
+ --phenof [/users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.phe],
+                         --eigf [/users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.eigR],
+                         --remlf [/users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.reml]
+        Output Options : --out-assocf [/users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.40000001.50000000.epacts],
+                        NOTICE - Reading delta = 50.118679
+ --verbose
+
+NOTICE - Reading eigenvectors
+NOTICE - Allocating a size 70221 bytes
+
+NOTICE - Finished loading phenotypes across 266 individuals with 1 covariates (including interception)
+NOTICE - Reading delta = 50.118679
+NOTICE - Processing 1225 markers across 266 individuals...
+243 markers included
+/users/sjahansi/bin/epacts/EPACTS/bin/epacts-anno --in /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.10000001.20000000.epacts --ref /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/human_g1k_v37.fasta
+NOTICE - Processing 1423 markers across 266 individuals...
+231 markers included
+/users/sjahansi/bin/epacts/EPACTS/bin/epacts-anno --in /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.20000001.30000000.epacts --ref /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/human_g1k_v37.fasta
+/users/sjahansi/bin/epacts/EPACTS/bin/anno -i /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.10000001.20000000.epacts -r /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/human_g1k_v37.fasta -f refGene -g /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/hg19_gencodeV14.txt.gz -c /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/codon.txt -o /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.10000001.20000000.epacts.tmp --inputFormat epacts -p /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/priority.txt
+The following parameters are available.  Ones with "[]" are in effect:
+
+Available Options
+    Required Parameters :
+                          -i [/users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.10000001.20000000.epacts]
+                          -o [/users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.10000001.20000000.epacts.tmp]
+          Gene Annotation
+             Parameters : -g [/users/sjahansi/bin/epacts/EPACTS/share/EPACTS/hg19_gencodeV14.txt.gz]
+                          -r [/users/sjahansi/bin/epacts/EPACTS/share/EPACTS/human_g1k_v37.fasta]
+                          --inputFormat [epacts], --checkReference, -f [refGene]
+                          -p [/users/sjahansi/bin/epacts/EPACTS/share/EPACTS/priority.txt]
+                          -c [/users/sjahansi/bin/epacts/EPACTS/share/EPACTS/codon.txt]
+                          -u [], -d [], --se [], --si [], --outputFormat []
+ Other Annotation Tools : --genomeScore [], --bed [], --tabix []
+Load reference genome /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/human_g1k_v37.fasta...
+DONE: 84 chromosomes and 3101804739 bases are loaded.
+Load codon file /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/codon.txt...
+DONE: codon file loaded.
+Load priority file /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/priority.txt...
+DONE: 24 priority annotation types loaded.
+Load gene file /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/hg19_gencodeV14.txt.gz...
+/users/sjahansi/bin/epacts/EPACTS/bin/anno -i /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.20000001.30000000.epacts -r /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/human_g1k_v37.fasta -f refGene -g /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/hg19_gencodeV14.txt.gz -c /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/codon.txt -o /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.20000001.30000000.epacts.tmp --inputFormat epacts -p /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/priority.txt
+The following parameters are available.  Ones with "[]" are in effect:
+
+Available Options
+    Required Parameters :
+                          -i [/users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.20000001.30000000.epacts]
+                          -o [/users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.20000001.30000000.epacts.tmp]
+          Gene Annotation
+             Parameters : -g [/users/sjahansi/bin/epacts/EPACTS/share/EPACTS/hg19_gencodeV14.txt.gz]
+                          -r [/users/sjahansi/bin/epacts/EPACTS/share/EPACTS/human_g1k_v37.fasta]
+                          --inputFormat [epacts], --checkReference, -f [refGene]
+                          -p [/users/sjahansi/bin/epacts/EPACTS/share/EPACTS/priority.txt]
+                          -c [/users/sjahansi/bin/epacts/EPACTS/share/EPACTS/codon.txt]
+                          -u [], -d [], --se [], --si [], --outputFormat []
+ Other Annotation Tools : --genomeScore [], --bed [], --tabix []
+Load reference genome /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/human_g1k_v37.fasta...
+DONE: 84 chromosomes and 3101804739 bases are loaded.
+Load codon file /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/codon.txt...
+DONE: codon file loaded.
+Load priority file /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/priority.txt...
+DONE: 24 priority annotation types loaded.
+Load gene file /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/hg19_gencodeV14.txt.gz...
+NOTICE - Processing 3245 markers across 266 individuals...
+634 markers included
+/users/sjahansi/bin/epacts/EPACTS/bin/epacts-anno --in /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.1.10000000.epacts --ref /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/human_g1k_v37.fasta
+NOTICE - Processing 3578 markers across 266 individuals...
+612 markers included
+/users/sjahansi/bin/epacts/EPACTS/bin/epacts-anno --in /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.40000001.50000000.epacts --ref /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/human_g1k_v37.fasta
+/users/sjahansi/bin/epacts/EPACTS/bin/anno -i /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.1.10000000.epacts -r /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/human_g1k_v37.fasta -f refGene -g /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/hg19_gencodeV14.txt.gz -c /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/codon.txt -o /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.1.10000000.epacts.tmp --inputFormat epacts -p /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/priority.txt
+The following parameters are available.  Ones with "[]" are in effect:
+
+Available Options
+    Required Parameters :
+                          -i [/users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.1.10000000.epacts]
+                          -o [/users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.1.10000000.epacts.tmp]
+          Gene Annotation
+             Parameters : -g [/users/sjahansi/bin/epacts/EPACTS/share/EPACTS/hg19_gencodeV14.txt.gz]
+                          -r [/users/sjahansi/bin/epacts/EPACTS/share/EPACTS/human_g1k_v37.fasta]
+                          --inputFormat [epacts], --checkReference, -f [refGene]
+                          -p [/users/sjahansi/bin/epacts/EPACTS/share/EPACTS/priority.txt]
+                          -c [/users/sjahansi/bin/epacts/EPACTS/share/EPACTS/codon.txt]
+                          -u [], -d [], --se [], --si [], --outputFormat []
+ Other Annotation Tools : --genomeScore [], --bed [], --tabix []
+NOTICE - Processing 4061 markers across 266 individuals...
+Load reference genome /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/human_g1k_v37.fasta...
+DONE: 84 chromosomes and 3101804739 bases are loaded.
+Load codon file /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/codon.txt...
+DONE: codon file loaded.
+Load priority file /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/priority.txt...
+DONE: 24 priority annotation types loaded.
+Load gene file /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/hg19_gencodeV14.txt.gz...
+550 markers included
+/users/sjahansi/bin/epacts/EPACTS/bin/epacts-anno --in /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.30000001.40000000.epacts --ref /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/human_g1k_v37.fasta
+/users/sjahansi/bin/epacts/EPACTS/bin/anno -i /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.40000001.50000000.epacts -r /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/human_g1k_v37.fasta -f refGene -g /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/hg19_gencodeV14.txt.gz -c /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/codon.txt -o /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.40000001.50000000.epacts.tmp --inputFormat epacts -p /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/priority.txt
+The following parameters are available.  Ones with "[]" are in effect:
+
+Available Options
+    Required Parameters :
+                          -i [/users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.40000001.50000000.epacts]
+                          -o [/users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.40000001.50000000.epacts.tmp]
+          Gene Annotation
+             Parameters : -g [/users/sjahansi/bin/epacts/EPACTS/share/EPACTS/hg19_gencodeV14.txt.gz]
+                          -r [/users/sjahansi/bin/epacts/EPACTS/share/EPACTS/human_g1k_v37.fasta]
+                          --inputFormat [epacts], --checkReference, -f [refGene]
+                          -p [/users/sjahansi/bin/epacts/EPACTS/share/EPACTS/priority.txt]
+                          -c [/users/sjahansi/bin/epacts/EPACTS/share/EPACTS/codon.txt]
+                          -u [], -d [], --se [], --si [], --outputFormat []
+ Other Annotation Tools : --genomeScore [], --bed [], --tabix []
+Load reference genome /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/human_g1k_v37.fasta...
+DONE: 84 chromosomes and 3101804739 bases are loaded.
+Load codon file /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/codon.txt...
+DONE: codon file loaded.
+Load priority file /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/priority.txt...
+DONE: 24 priority annotation types loaded.
+Load gene file /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/hg19_gencodeV14.txt.gz...
+/users/sjahansi/bin/epacts/EPACTS/bin/anno -i /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.30000001.40000000.epacts -r /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/human_g1k_v37.fasta -f refGene -g /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/hg19_gencodeV14.txt.gz -c /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/codon.txt -o /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.30000001.40000000.epacts.tmp --inputFormat epacts -p /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/priority.txt
+The following parameters are available.  Ones with "[]" are in effect:
+
+Available Options
+    Required Parameters :
+                          -i [/users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.30000001.40000000.epacts]
+                          -o [/users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.30000001.40000000.epacts.tmp]
+          Gene Annotation
+             Parameters : -g [/users/sjahansi/bin/epacts/EPACTS/share/EPACTS/hg19_gencodeV14.txt.gz]
+                          -r [/users/sjahansi/bin/epacts/EPACTS/share/EPACTS/human_g1k_v37.fasta]
+                          --inputFormat [epacts], --checkReference, -f [refGene]
+                          -p [/users/sjahansi/bin/epacts/EPACTS/share/EPACTS/priority.txt]
+                          -c [/users/sjahansi/bin/epacts/EPACTS/share/EPACTS/codon.txt]
+                          -u [], -d [], --se [], --si [], --outputFormat []
+ Other Annotation Tools : --genomeScore [], --bed [], --tabix []
+Load reference genome /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/human_g1k_v37.fasta...
+DONE: 84 chromosomes and 3101804739 bases are loaded.
+Load codon file /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/codon.txt...
+DONE: codon file loaded.
+Load priority file /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/priority.txt...
+DONE: 24 priority annotation types loaded.
+Load gene file /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/hg19_gencodeV14.txt.gz...
+DONE: 92627 gene loaded.
+DONE: 92627 gene loaded.
+DONE: Generated frequency of each annotype type in [ /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.20000001.30000000.epacts.tmp.anno.frq ].
+DONE: Generated frequency of each highest priority annotation type in [ /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.20000001.30000000.epacts.tmp.top.anno.frq ].
+Ts/Tv ratio: 2.6581
+Ts observed: 1034  times; Tv observed: 389 times.
+DONE: Generated frequency of each base change in [ /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.20000001.30000000.epacts.tmp.base.frq ].
+DONE: Generated frequency of each annotype type in [ /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.10000001.20000000.epacts.tmp.anno.frq ].
+DONE: Generated frequency of each codon change in [ /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.20000001.30000000.epacts.tmp.codon.frq ].
+DONE: Generated frequency of each highest priority annotation type in [ /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.10000001.20000000.epacts.tmp.top.anno.frq ].
+DONE: Generated frequency of indel length in [ /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.20000001.30000000.epacts.tmp.indel.frq ].
+Ts/Tv ratio: 2.91374
+Ts observed: 912  times; Tv observed: 313 times.
+DONE: Generated frequency of each base change in [ /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.10000001.20000000.epacts.tmp.base.frq ].
+DONE: Generated frequency of each codon change in [ /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.10000001.20000000.epacts.tmp.codon.frq ].
+DONE: Generated frequency of indel length in [ /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.10000001.20000000.epacts.tmp.indel.frq ].
+DONE: 92627 gene loaded.
+..............................................         
+ ...      Anno(tation)                       ...       
+  ...      Xiaowei Zhan, Goncalo Abecasis     ...      
+   ...      Speical Thanks:                    ...     
+    ...      Hyun Ming Kang, Yanming Li         ...    
+     ...      zhanxw@umich.edu                    ...  
+      ...      Sep 2011                            ... 
+       ................................................
+                                                       
+DONE: 1423 varaints are annotated.
+DONE: Generated annotation output in [ /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.20000001.30000000.epacts.tmp ].
+Annotation succeed!
+mv /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.20000001.30000000.epacts.tmp /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.20000001.30000000.epacts
+rm /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.20000001.30000000.epacts.tmp.log /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.20000001.30000000.epacts.tmp.top.anno.frq /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.20000001.30000000.epacts.tmp.anno.frq /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.20000001.30000000.epacts.tmp.base.frq /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.20000001.30000000.epacts.tmp.codon.frq /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.20000001.30000000.epacts.tmp.indel.frq
+..............................................         
+ ...      Anno(tation)                       ...       
+  ...      Xiaowei Zhan, Goncalo Abecasis     ...      
+   ...      Speical Thanks:                    ...     
+    ...      Hyun Ming Kang, Yanming Li         ...    
+     ...      zhanxw@umich.edu                    ...  
+      ...      Sep 2011                            ... 
+       ................................................
+                                                       
+DONE: 1225 varaints are annotated.
+DONE: Generated annotation output in [ /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.10000001.20000000.epacts.tmp ].
+Annotation succeed!
+mv /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.10000001.20000000.epacts.tmp /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.10000001.20000000.epacts
+/users/sjahansi/bin/epacts/EPACTS/bin/pEmmax assoc --vcf /users/sjahansi/bin/epacts/EPACTS/bin/./../share/EPACTS/1000G_exome_chr20_example_softFiltered.calls.vcf.gz --region 20:50000001-60000000 --phenof /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.phe --field GT --indf /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.ind --eigf /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.eigR --remlf /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.reml --out-assocf /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.50000001.60000000.epacts --minMAF 0.001 --maxMAF 1 --maxMAC 1000000000 --minRSQ 0 --minCallRate 0.5 --minMAC 3
+
+The following parameters are available.  Ones with "[]" are in effect:
+rm /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.10000001.20000000.epacts.tmp.log /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.10000001.20000000.epacts.tmp.top.anno.frq /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.10000001.20000000.epacts.tmp.anno.frq /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.10000001.20000000.epacts.tmp.base.frq /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.10000001.20000000.epacts.tmp.codon.frq /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.10000001.20000000.epacts.tmp.indel.frq
+
+Available Options
+     VCF Input Options : --vcf [/users/sjahansi/bin/epacts/EPACTS/bin/./../share/EPACTS/1000G_exome_chr20_example_softFiltered.calls.vcf.gz],
+                         --region [20:50000001-60000000], --unit [10000],
+                         --indf [/users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.ind],
+                         --field [GT], --rule [], --minMAF [1.0e-03],
+                         --maxMAF [1.00], --minMAC [3], --maxMAC [1000000000],
+                         --minCallRate [0.50], --minRSQ [0.00], --ignoreFilter
+   Other Input Options : --phenof [/users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.phe],
+                         --eigf [/users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.eigR],
+                         --remlf [/users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.reml]
+        Output Options : --out-assocf [/users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.50000001.60000000.epacts],
+                         --verbose
+
+DONE: 92627 gene loaded.
+NOTICE - Reading eigenvectors
+NOTICE - Allocating a size 70221 bytes
+
+NOTICE - Finished loading phenotypes across 266 individuals with 1 covariates (including interception)
+/users/sjahansi/bin/epacts/EPACTS/bin/pEmmax assoc --vcf /users/sjahansi/bin/epacts/EPACTS/bin/./../share/EPACTS/1000G_exome_chr20_example_softFiltered.calls.vcf.gz --region 20:60000001-63025520 --phenof /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.phe --field GT --indf /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.ind --eigf /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.eigR --remlf /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.reml --out-assocf /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.60000001.63025520.epacts --minMAF 0.001 --maxMAF 1 --maxMAC 1000000000 --minRSQ 0 --minCallRate 0.5 --minMAC 3
+NOTICE - Reading delta = 50.118679
+
+The following parameters are available.  Ones with "[]" are in effect:
+
+Available Options
+     VCF Input Options : --vcf [/users/sjahansi/bin/epacts/EPACTS/bin/./../share/EPACTS/1000G_exome_chr20_example_softFiltered.calls.vcf.gz],
+                         --region [20:60000001-63025520], --unit [10000],
+                         --indf [/users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.ind],
+                         --field [GT], --rule [], --minMAF [1.0e-03],
+                         --maxMAF [1.00], --minMAC [3], --maxMAC [1000000000],
+                         --minCallRate [0.50], --minRSQ [0.00], --ignoreFilter
+   Other Input Options : --phenof [/users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.phe],
+                         --eigf [/users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.eigR],
+                         --remlf [/users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.reml]
+        Output Options : --out-assocf [/users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.60000001.63025520.epacts],
+                         --verbose
+
+NOTICE - Reading eigenvectors
+NOTICE - Allocating a size 70221 bytes
+
+NOTICE - Finished loading phenotypes across 266 individuals with 1 covariates (including interception)
+NOTICE - Reading delta = 50.118679
+DONE: 92627 gene loaded.
+DONE: Generated frequency of each annotype type in [ /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.1.10000000.epacts.tmp.anno.frq ].
+DONE: Generated frequency of each highest priority annotation type in [ /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.1.10000000.epacts.tmp.top.anno.frq ].
+Ts/Tv ratio: 2.96215
+Ts observed: 2426  times; Tv observed: 819 times.
+DONE: Generated frequency of each base change in [ /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.1.10000000.epacts.tmp.base.frq ].
+DONE: Generated frequency of each codon change in [ /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.1.10000000.epacts.tmp.codon.frq ].
+DONE: Generated frequency of indel length in [ /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.1.10000000.epacts.tmp.indel.frq ].
+DONE: Generated frequency of each annotype type in [ /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.40000001.50000000.epacts.tmp.anno.frq ].
+DONE: Generated frequency of each highest priority annotation type in [ /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.40000001.50000000.epacts.tmp.top.anno.frq ].
+Ts/Tv ratio: 2.73486
+Ts observed: 2620  times; Tv observed: 958 times.
+DONE: Generated frequency of each base change in [ /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.40000001.50000000.epacts.tmp.base.frq ].
+DONE: Generated frequency of each codon change in [ /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.40000001.50000000.epacts.tmp.codon.frq ].
+DONE: Generated frequency of indel length in [ /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.40000001.50000000.epacts.tmp.indel.frq ].
+NOTICE - Processing 1732 markers across 266 individuals...
+309 markers included
+/users/sjahansi/bin/epacts/EPACTS/bin/epacts-anno --in /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.50000001.60000000.epacts --ref /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/human_g1k_v37.fasta
+DONE: Generated frequency of each annotype type in [ /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.30000001.40000000.epacts.tmp.anno.frq ].
+DONE: Generated frequency of each highest priority annotation type in [ /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.30000001.40000000.epacts.tmp.top.anno.frq ].
+Ts/Tv ratio: 2.96582
+Ts observed: 3037  times; Tv observed: 1024 times.
+DONE: Generated frequency of each base change in [ /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.30000001.40000000.epacts.tmp.base.frq ].
+DONE: Generated frequency of each codon change in [ /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.30000001.40000000.epacts.tmp.codon.frq ].
+DONE: Generated frequency of indel length in [ /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.30000001.40000000.epacts.tmp.indel.frq ].
+/users/sjahansi/bin/epacts/EPACTS/bin/anno -i /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.50000001.60000000.epacts -r /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/human_g1k_v37.fasta -f refGene -g /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/hg19_gencodeV14.txt.gz -c /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/codon.txt -o /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.50000001.60000000.epacts.tmp --inputFormat epacts -p /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/priority.txt
+The following parameters are available.  Ones with "[]" are in effect:
+
+Available Options
+    Required Parameters :
+                          -i [/users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.50000001.60000000.epacts]
+                          -o [/users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.50000001.60000000.epacts.tmp]
+          Gene Annotation
+             Parameters : -g [/users/sjahansi/bin/epacts/EPACTS/share/EPACTS/hg19_gencodeV14.txt.gz]
+                          -r [/users/sjahansi/bin/epacts/EPACTS/share/EPACTS/human_g1k_v37.fasta]
+                          --inputFormat [epacts], --checkReference, -f [refGene]
+                          -p [/users/sjahansi/bin/epacts/EPACTS/share/EPACTS/priority.txt]
+                          -c [/users/sjahansi/bin/epacts/EPACTS/share/EPACTS/codon.txt]
+                          -u [], -d [], --se [], --si [], --outputFormat []
+ Other Annotation Tools : --genomeScore [], --bed [], --tabix []
+Load reference genome /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/human_g1k_v37.fasta...
+DONE: 84 chromosomes and 3101804739 bases are loaded.
+Load codon file /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/codon.txt...
+DONE: codon file loaded.
+Load priority file /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/priority.txt...
+DONE: 24 priority annotation types loaded.
+Load gene file /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/hg19_gencodeV14.txt.gz...
+..............................................         
+ ...      Anno(tation)                       ...       
+  ...      Xiaowei Zhan, Goncalo Abecasis     ...      
+   ...      Speical Thanks:                    ...     
+    ...      Hyun Ming Kang, Yanming Li         ...    
+     ...      zhanxw@umich.edu                    ...  
+      ...      Sep 2011                            ... 
+       ................................................
+                                                       
+DONE: 3245 varaints are annotated.
+DONE: Generated annotation output in [ /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.1.10000000.epacts.tmp ].
+Annotation succeed!
+mv /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.1.10000000.epacts.tmp /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.1.10000000.epacts
+rm /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.1.10000000.epacts.tmp.log /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.1.10000000.epacts.tmp.top.anno.frq /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.1.10000000.epacts.tmp.anno.frq /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.1.10000000.epacts.tmp.base.frq /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.1.10000000.epacts.tmp.codon.frq /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.1.10000000.epacts.tmp.indel.frq
+NOTICE - Processing 3292 markers across 266 individuals...
+..............................................         
+ ...      Anno(tation)                       ...       
+  ...      Xiaowei Zhan, Goncalo Abecasis     ...      
+   ...      Speical Thanks:                    ...     
+    ...      Hyun Ming Kang, Yanming Li         ...    
+     ...      zhanxw@umich.edu                    ...  
+      ...      Sep 2011                            ... 
+       ................................................
+                                                       
+DONE: 3578 varaints are annotated.
+DONE: Generated annotation output in [ /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.40000001.50000000.epacts.tmp ].
+Annotation succeed!
+mv /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.40000001.50000000.epacts.tmp /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.40000001.50000000.epacts
+657 markers included
+rm /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.40000001.50000000.epacts.tmp.log /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.40000001.50000000.epacts.tmp.top.anno.frq /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.40000001.50000000.epacts.tmp.anno.frq /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.40000001.50000000.epacts.tmp.base.frq /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.40000001.50000000.epacts.tmp.codon.frq /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.40000001.50000000.epacts.tmp.indel.frq
+/users/sjahansi/bin/epacts/EPACTS/bin/epacts-anno --in /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.60000001.63025520.epacts --ref /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/human_g1k_v37.fasta
+..............................................         
+ ...      Anno(tation)                       ...       
+  ...      Xiaowei Zhan, Goncalo Abecasis     ...      
+   ...      Speical Thanks:                    ...     
+    ...      Hyun Ming Kang, Yanming Li         ...    
+     ...      zhanxw@umich.edu                    ...  
+      ...      Sep 2011                            ... 
+       ................................................
+                                                       
+DONE: 4061 varaints are annotated.
+DONE: Generated annotation output in [ /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.30000001.40000000.epacts.tmp ].
+Annotation succeed!
+mv /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.30000001.40000000.epacts.tmp /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.30000001.40000000.epacts
+rm /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.30000001.40000000.epacts.tmp.log /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.30000001.40000000.epacts.tmp.top.anno.frq /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.30000001.40000000.epacts.tmp.anno.frq /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.30000001.40000000.epacts.tmp.base.frq /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.30000001.40000000.epacts.tmp.codon.frq /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.30000001.40000000.epacts.tmp.indel.frq
+/users/sjahansi/bin/epacts/EPACTS/bin/anno -i /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.60000001.63025520.epacts -r /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/human_g1k_v37.fasta -f refGene -g /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/hg19_gencodeV14.txt.gz -c /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/codon.txt -o /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.60000001.63025520.epacts.tmp --inputFormat epacts -p /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/priority.txt
+The following parameters are available.  Ones with "[]" are in effect:
+
+Available Options
+    Required Parameters :
+                          -i [/users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.60000001.63025520.epacts]
+                          -o [/users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.60000001.63025520.epacts.tmp]
+          Gene Annotation
+             Parameters : -g [/users/sjahansi/bin/epacts/EPACTS/share/EPACTS/hg19_gencodeV14.txt.gz]
+                          -r [/users/sjahansi/bin/epacts/EPACTS/share/EPACTS/human_g1k_v37.fasta]
+                          --inputFormat [epacts], --checkReference, -f [refGene]
+                          -p [/users/sjahansi/bin/epacts/EPACTS/share/EPACTS/priority.txt]
+                          -c [/users/sjahansi/bin/epacts/EPACTS/share/EPACTS/codon.txt]
+                          -u [], -d [], --se [], --si [], --outputFormat []
+ Other Annotation Tools : --genomeScore [], --bed [], --tabix []
+Load reference genome /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/human_g1k_v37.fasta...
+DONE: 84 chromosomes and 3101804739 bases are loaded.
+Load codon file /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/codon.txt...
+DONE: codon file loaded.
+Load priority file /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/priority.txt...
+DONE: 24 priority annotation types loaded.
+Load gene file /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/hg19_gencodeV14.txt.gz...
+DONE: 92627 gene loaded.
+DONE: Generated frequency of each annotype type in [ /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.50000001.60000000.epacts.tmp.anno.frq ].
+DONE: Generated frequency of each highest priority annotation type in [ /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.50000001.60000000.epacts.tmp.top.anno.frq ].
+Ts/Tv ratio: 2.66173
+Ts observed: 1259  times; Tv observed: 473 times.
+DONE: Generated frequency of each base change in [ /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.50000001.60000000.epacts.tmp.base.frq ].
+DONE: Generated frequency of each codon change in [ /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.50000001.60000000.epacts.tmp.codon.frq ].
+DONE: Generated frequency of indel length in [ /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.50000001.60000000.epacts.tmp.indel.frq ].
+..............................................         
+ ...      Anno(tation)                       ...       
+  ...      Xiaowei Zhan, Goncalo Abecasis     ...      
+   ...      Speical Thanks:                    ...     
+    ...      Hyun Ming Kang, Yanming Li         ...    
+     ...      zhanxw@umich.edu                    ...  
+      ...      Sep 2011                            ... 
+       ................................................
+                                                       
+DONE: 1732 varaints are annotated.
+DONE: Generated annotation output in [ /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.50000001.60000000.epacts.tmp ].
+Annotation succeed!
+mv /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.50000001.60000000.epacts.tmp /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.50000001.60000000.epacts
+rm /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.50000001.60000000.epacts.tmp.log /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.50000001.60000000.epacts.tmp.top.anno.frq /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.50000001.60000000.epacts.tmp.anno.frq /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.50000001.60000000.epacts.tmp.base.frq /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.50000001.60000000.epacts.tmp.codon.frq /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.50000001.60000000.epacts.tmp.indel.frq
+DONE: 92627 gene loaded.
+DONE: Generated frequency of each annotype type in [ /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.60000001.63025520.epacts.tmp.anno.frq ].
+DONE: Generated frequency of each highest priority annotation type in [ /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.60000001.63025520.epacts.tmp.top.anno.frq ].
+Ts/Tv ratio: 4.03364
+Ts observed: 2638  times; Tv observed: 654 times.
+DONE: Generated frequency of each base change in [ /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.60000001.63025520.epacts.tmp.base.frq ].
+DONE: Generated frequency of each codon change in [ /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.60000001.63025520.epacts.tmp.codon.frq ].
+DONE: Generated frequency of indel length in [ /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.60000001.63025520.epacts.tmp.indel.frq ].
+..............................................         
+ ...      Anno(tation)                       ...       
+  ...      Xiaowei Zhan, Goncalo Abecasis     ...      
+   ...      Speical Thanks:                    ...     
+    ...      Hyun Ming Kang, Yanming Li         ...    
+     ...      zhanxw@umich.edu                    ...  
+      ...      Sep 2011                            ... 
+       ................................................
+                                                       
+DONE: 3292 varaints are annotated.
+DONE: Generated annotation output in [ /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.60000001.63025520.epacts.tmp ].
+Annotation succeed!
+mv /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.60000001.63025520.epacts.tmp /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.60000001.63025520.epacts
+rm /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.60000001.63025520.epacts.tmp.log /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.60000001.63025520.epacts.tmp.top.anno.frq /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.60000001.63025520.epacts.tmp.anno.frq /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.60000001.63025520.epacts.tmp.base.frq /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.60000001.63025520.epacts.tmp.codon.frq /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.60000001.63025520.epacts.tmp.indel.frq
+/users/sjahansi/bin/epacts/EPACTS/bin/epacts-cat /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.1.10000000.epacts /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.10000001.20000000.epacts /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.20000001.30000000.epacts /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.30000001.40000000.epacts /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.40000001.50000000.epacts /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.50000001.60000000.epacts /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.60000001.63025520.epacts | /users/sjahansi/bin/epacts/EPACTS/bin/bgzip -c > /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.epacts.gz
+/users/sjahansi/bin/epacts/EPACTS/bin/tabix -f -pbed /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.epacts.gz
+rm -f /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.1.10000000.epacts /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.10000001.20000000.epacts /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.20000001.30000000.epacts /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.30000001.40000000.epacts /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.40000001.50000000.epacts /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.50000001.60000000.epacts /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.20.60000001.63025520.epacts
+/users/sjahansi/bin/epacts/EPACTS/bin/epacts-plot --in /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.epacts.gz --region 20:0
+nsnps = 3236
+Rscript /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.epacts.R --vanilla
+
+export GDFONTPATH=/users/sjahansi/bin/epacts/EPACTS/share/EPACTS; export GNUPLOT_FONTPATH=/users/sjahansi/bin/epacts/EPACTS/share/EPACTS; export GNUPLOT_PS_DIR=/users/sjahansi/bin/epacts/EPACTS/share/EPACTS; export PATH=$PATH:/users/sjahansi/bin/epacts/EPACTS/bin/; export GNUPLOT_PFBTOPFA="pfbtops %s"; gnuplot /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.epacts.cmd
+export GDFONTPATH=/users/sjahansi/bin/epacts/EPACTS/share/EPACTS; export GNUPLOT_FONTPATH=/users/sjahansi/bin/epacts/EPACTS/share/EPACTS; export GNUPLOT_PS_DIR=/users/sjahansi/bin/epacts/EPACTS/share/EPACTS; export PATH=$PATH:/users/sjahansi/bin/epacts/EPACTS/bin/; export GNUPLOT_PFBTOPFA="pfbtops %s"; /users/sjahansi/bin/epacts/EPACTS/bin/epstopdf /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.epacts.qq.eps
+export GDFONTPATH=/users/sjahansi/bin/epacts/EPACTS/share/EPACTS; export GNUPLOT_FONTPATH=/users/sjahansi/bin/epacts/EPACTS/share/EPACTS; export GNUPLOT_PS_DIR=/users/sjahansi/bin/epacts/EPACTS/share/EPACTS; export PATH=$PATH:/users/sjahansi/bin/epacts/EPACTS/bin/; export GNUPLOT_PFBTOPFA="pfbtops %s"; gnuplot /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.epacts.cmd
+export GDFONTPATH=/users/sjahansi/bin/epacts/EPACTS/share/EPACTS; export GNUPLOT_FONTPATH=/users/sjahansi/bin/epacts/EPACTS/share/EPACTS; export GNUPLOT_PS_DIR=/users/sjahansi/bin/epacts/EPACTS/share/EPACTS; export PATH=$PATH:/users/sjahansi/bin/epacts/EPACTS/bin/; export GNUPLOT_PFBTOPFA="pfbtops %s"; /users/sjahansi/bin/epacts/EPACTS/bin/epstopdf /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.epacts.mh.eps
+rm /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.epacts.cmd /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.epacts.qq.eps /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.epacts.mh.eps /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.epacts.*.dat
+zcat /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.epacts.gz | awk '$11 != "NA" { print $0 }' | sort -g -k 11 | head -n 5000 > /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.epacts.top5000
+touch /users/sjahansi/bin/epacts/EPACTS/bin/out/test.single.q.emmax.epacts.OK
+Taking the site list from the VCF file
+Annotate the VCF file
+/users/sjahansi/bin/epacts/EPACTS/bin/anno -i out/1000G_exome_chr20_example_softFiltered.calls.sites.vcf.gz -r /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/human_g1k_v37.fasta -f refGene -g /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/hg19_gencodeV14.txt.gz -c /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/codon.txt -o out/1000G_exome_chr20_example_softFiltered.calls.sites.anno.vcf.gz --inputFormat vcf -p /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/priority.txt
+The following parameters are available.  Ones with "[]" are in effect:
+
+Available Options
+    Required Parameters :
+                          -i [out/1000G_exome_chr20_example_softFiltered.calls.sites.vcf.gz]
+                          -o [out/1000G_exome_chr20_example_softFiltered.calls.sites.anno.vcf.gz]
+          Gene Annotation
+             Parameters : -g [/users/sjahansi/bin/epacts/EPACTS/share/EPACTS/hg19_gencodeV14.txt.gz]
+                          -r [/users/sjahansi/bin/epacts/EPACTS/share/EPACTS/human_g1k_v37.fasta]
+                          --inputFormat [vcf], --checkReference, -f [refGene]
+                          -p [/users/sjahansi/bin/epacts/EPACTS/share/EPACTS/priority.txt]
+                          -c [/users/sjahansi/bin/epacts/EPACTS/share/EPACTS/codon.txt]
+                          -u [], -d [], --se [], --si [], --outputFormat []
+ Other Annotation Tools : --genomeScore [], --bed [], --tabix []
+Load reference genome /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/human_g1k_v37.fasta...
+DONE: 84 chromosomes and 3101804739 bases are loaded.
+Load codon file /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/codon.txt...
+DONE: codon file loaded.
+Load priority file /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/priority.txt...
+DONE: 24 priority annotation types loaded.
+Load gene file /users/sjahansi/bin/epacts/EPACTS/share/EPACTS/hg19_gencodeV14.txt.gz...
+DONE: 92627 gene loaded.
+DONE: Generated frequency of each annotype type in [ out/1000G_exome_chr20_example_softFiltered.calls.sites.anno.vcf.gz.anno.frq ].
+DONE: Generated frequency of each highest priority annotation type in [ out/1000G_exome_chr20_example_softFiltered.calls.sites.anno.vcf.gz.top.anno.frq ].
+Ts/Tv ratio: 2.9522
+Ts observed: 14268  times; Tv observed: 4833 times.
+DONE: Generated frequency of each base change in [ out/1000G_exome_chr20_example_softFiltered.calls.sites.anno.vcf.gz.base.frq ].
+DONE: Generated frequency of each codon change in [ out/1000G_exome_chr20_example_softFiltered.calls.sites.anno.vcf.gz.codon.frq ].
+DONE: Generated frequency of indel length in [ out/1000G_exome_chr20_example_softFiltered.calls.sites.anno.vcf.gz.indel.frq ].
+..............................................         
+ ...      Anno(tation)                       ...       
+  ...      Xiaowei Zhan, Goncalo Abecasis     ...      
+   ...      Speical Thanks:                    ...     
+    ...      Hyun Ming Kang, Yanming Li         ...    
+     ...      zhanxw@umich.edu                    ...  
+      ...      Sep 2011                            ... 
+       ................................................
+                                                       
+DONE: 19101 varaints are annotated.
+DONE: Generated annotation output in [ out/1000G_exome_chr20_example_softFiltered.calls.sites.anno.vcf.gz ].
+Annotation succeed!
+mv out/1000G_exome_chr20_example_softFiltered.calls.sites.anno.vcf.gz out/1000G_exome_chr20_example_softFiltered.calls.sites.vcf.gz.tmp
+/users/sjahansi/bin/epacts/EPACTS/bin/bgzip -c out/1000G_exome_chr20_example_softFiltered.calls.sites.vcf.gz.tmp > out/1000G_exome_chr20_example_softFiltered.calls.sites.anno.vcf.gz
+/users/sjahansi/bin/epacts/EPACTS/bin/tabix -pvcf -f out/1000G_exome_chr20_example_softFiltered.calls.sites.anno.vcf.gz
+rm out/1000G_exome_chr20_example_softFiltered.calls.sites.vcf.gz.tmp
+rm out/1000G_exome_chr20_example_softFiltered.calls.sites.anno.vcf.gz.log out/1000G_exome_chr20_example_softFiltered.calls.sites.anno.vcf.gz.top.anno.frq out/1000G_exome_chr20_example_softFiltered.calls.sites.anno.vcf.gz.anno.frq out/1000G_exome_chr20_example_softFiltered.calls.sites.anno.vcf.gz.base.frq out/1000G_exome_chr20_example_softFiltered.calls.sites.anno.vcf.gz.codon.frq out/1000G_exome_chr20_example_softFiltered.calls.sites.anno.vcf.gz.indel.frq
+Create the input group file for burden test
+Succesfully create group information for 508 genes
+Performing SKAT-O test
+Detected phenotypes with more than 3 unique values -- considering as quantitative phenotypes.
+Successfully written phenotypes and 2 covariates across 266 individuals
+Finished generating EPACTS Makefile
+Running 5 parallel jobs of EPACTS
+forkExecWait(): make -f /users/sjahansi/bin/epacts/EPACTS/bin/out/test.gene.skat.Makefile -j 5
+Rscript /users/sjahansi/bin/epacts/EPACTS/bin/out/test.gene.skat.0.R --vanilla
+Rscript /users/sjahansi/bin/epacts/EPACTS/bin/out/test.gene.skat.1.R --vanilla
+Rscript /users/sjahansi/bin/epacts/EPACTS/bin/out/test.gene.skat.2.R --vanilla
+Rscript /users/sjahansi/bin/epacts/EPACTS/bin/out/test.gene.skat.3.R --vanilla
+Rscript /users/sjahansi/bin/epacts/EPACTS/bin/out/test.gene.skat.4.R --vanilla
+Loading required package: epactsR
+Loading required package: epactsR
+Loading required package: mmSKAT
+Loading required package: epactsR
+Loading required package: epactsR
+Loading required package: epactsR
+Loading required package: mmSKAT
+Loading required package: mmSKAT
+Loading required package: mmSKAT
+Loading required package: mmSKAT
+NULL
+Sucessfully wrote ( 100 * 7 ) matrix
+There were 17 warnings (use warnings() to see them)
+Rscript /users/sjahansi/bin/epacts/EPACTS/bin/out/test.gene.skat.5.R --vanilla
+Loading required package: epactsR
+Loading required package: mmSKAT
+NULL
+Sucessfully wrote ( 100 * 7 ) matrix
+There were 15 warnings (use warnings() to see them)
+NULL
+Sucessfully wrote ( 100 * 7 ) matrix
+There were 11 warnings (use warnings() to see them)
+NULL
+Sucessfully wrote ( 100 * 7 ) matrix
+There were 18 warnings (use warnings() to see them)
+NULL
+Sucessfully wrote ( 8 * 7 ) matrix
+Warning message:
+Only one SNP in the SNP set! 
+NULL
+Sucessfully wrote ( 100 * 7 ) matrix
+There were 12 warnings (use warnings() to see them)
+(head -1 /users/sjahansi/bin/epacts/EPACTS/bin/out/test.gene.skat.0.epacts; cat /users/sjahansi/bin/epacts/EPACTS/bin/out/test.gene.skat.0.epacts /users/sjahansi/bin/epacts/EPACTS/bin/out/test.gene.skat.1.epacts /users/sjahansi/bin/epacts/EPACTS/bin/out/test.gene.skat.2.epacts /users/sjahansi/bin/epacts/EPACTS/bin/out/test.gene.skat.3.epacts /users/sjahansi/bin/epacts/EPACTS/bin/out/test.gene.skat.4.epacts /users/sjahansi/bin/epacts/EPACTS/bin/out/test.gene.skat.5.epacts | grep -v ^#;) > /users/sjahansi/bin/epacts/EPACTS/bin/out/test.gene.skat.epacts
+rm /users/sjahansi/bin/epacts/EPACTS/bin/out/test.gene.skat.0.epacts /users/sjahansi/bin/epacts/EPACTS/bin/out/test.gene.skat.1.epacts /users/sjahansi/bin/epacts/EPACTS/bin/out/test.gene.skat.2.epacts /users/sjahansi/bin/epacts/EPACTS/bin/out/test.gene.skat.3.epacts /users/sjahansi/bin/epacts/EPACTS/bin/out/test.gene.skat.4.epacts /users/sjahansi/bin/epacts/EPACTS/bin/out/test.gene.skat.5.epacts /users/sjahansi/bin/epacts/EPACTS/bin/out/test.gene.skat.0.R /users/sjahansi/bin/epacts/EPACTS/bin/out/test.gene.skat.1.R /users/sjahansi/bin/epacts/EPACTS/bin/out/test.gene.skat.2.R /users/sjahansi/bin/epacts/EPACTS/bin/out/test.gene.skat.3.R /users/sjahansi/bin/epacts/EPACTS/bin/out/test.gene.skat.4.R /users/sjahansi/bin/epacts/EPACTS/bin/out/test.gene.skat.5.R
+/users/sjahansi/bin/epacts/EPACTS/bin/epacts-plot --in /users/sjahansi/bin/epacts/EPACTS/bin/out/test.gene.skat.epacts
+nsnps = 437
+Rscript /users/sjahansi/bin/epacts/EPACTS/bin/out/test.gene.skat.epacts.R --vanilla
+
+export GDFONTPATH=/users/sjahansi/bin/epacts/EPACTS/share/EPACTS; export GNUPLOT_FONTPATH=/users/sjahansi/bin/epacts/EPACTS/share/EPACTS; export GNUPLOT_PS_DIR=/users/sjahansi/bin/epacts/EPACTS/share/EPACTS; export PATH=$PATH:/users/sjahansi/bin/epacts/EPACTS/bin/; export GNUPLOT_PFBTOPFA="pfbtops %s"; gnuplot /users/sjahansi/bin/epacts/EPACTS/bin/out/test.gene.skat.epacts.cmd
+export GDFONTPATH=/users/sjahansi/bin/epacts/EPACTS/share/EPACTS; export GNUPLOT_FONTPATH=/users/sjahansi/bin/epacts/EPACTS/share/EPACTS; export GNUPLOT_PS_DIR=/users/sjahansi/bin/epacts/EPACTS/share/EPACTS; export PATH=$PATH:/users/sjahansi/bin/epacts/EPACTS/bin/; export GNUPLOT_PFBTOPFA="pfbtops %s"; /users/sjahansi/bin/epacts/EPACTS/bin/epstopdf /users/sjahansi/bin/epacts/EPACTS/bin/out/test.gene.skat.epacts.qq.eps
+export GDFONTPATH=/users/sjahansi/bin/epacts/EPACTS/share/EPACTS; export GNUPLOT_FONTPATH=/users/sjahansi/bin/epacts/EPACTS/share/EPACTS; export GNUPLOT_PS_DIR=/users/sjahansi/bin/epacts/EPACTS/share/EPACTS; export PATH=$PATH:/users/sjahansi/bin/epacts/EPACTS/bin/; export GNUPLOT_PFBTOPFA="pfbtops %s"; gnuplot /users/sjahansi/bin/epacts/EPACTS/bin/out/test.gene.skat.epacts.cmd
+export GDFONTPATH=/users/sjahansi/bin/epacts/EPACTS/share/EPACTS; export GNUPLOT_FONTPATH=/users/sjahansi/bin/epacts/EPACTS/share/EPACTS; export GNUPLOT_PS_DIR=/users/sjahansi/bin/epacts/EPACTS/share/EPACTS; export PATH=$PATH:/users/sjahansi/bin/epacts/EPACTS/bin/; export GNUPLOT_PFBTOPFA="pfbtops %s"; /users/sjahansi/bin/epacts/EPACTS/bin/epstopdf /users/sjahansi/bin/epacts/EPACTS/bin/out/test.gene.skat.epacts.mh.eps
+rm /users/sjahansi/bin/epacts/EPACTS/bin/out/test.gene.skat.epacts.cmd /users/sjahansi/bin/epacts/EPACTS/bin/out/test.gene.skat.epacts.qq.eps /users/sjahansi/bin/epacts/EPACTS/bin/out/test.gene.skat.epacts.mh.eps /users/sjahansi/bin/epacts/EPACTS/bin/out/test.gene.skat.epacts.*.dat
+cat /users/sjahansi/bin/epacts/EPACTS/bin/out/test.gene.skat.epacts | awk '$10 != "NA" { print $0 }' | sort -g -k 10 | head -n 5000 > /users/sjahansi/bin/epacts/EPACTS/bin/out/test.gene.skat.epacts.top5000
+touch /users/sjahansi/bin/epacts/EPACTS/bin/out/test.gene.skat.epacts.OK
+[compute-092 /users/sjahansi/bin/epacts/EPACTS/bin]$ ls
+anno    epacts-anno         epacts-enrich      epacts-multi     epacts-single  pEmmax              wGetOptions.pm
+bgzip   epacts-cat          epacts-group       epacts-pca-plot  epacts-zoom    tabix
+chaps   epacts-cis-extract  epacts-make-group  epacts-plot      epstopdf       test_run_epacts.sh
+epacts  epacts-download     epacts-make-kin    epacts.pm        out            vcfast
+[compute-092 /users/sjahansi/bin/epacts/EPACTS/bin]$ cat out
+cat: out: Is a directory
+[compute-092 /users/sjahansi/bin/epacts/EPACTS/bin]$ cd out
+[compute-092 /users/sjahansi/bin/epacts/EPACTS/bin/out]$ ls
+1000G_exome_chr20_example_softFiltered.calls.sites.anno.grp         test.single.b.score.epacts.top5000
+1000G_exome_chr20_example_softFiltered.calls.sites.anno.vcf.gz      test.single.b.score.ind
+1000G_exome_chr20_example_softFiltered.calls.sites.anno.vcf.gz.tbi  test.single.b.score.Makefile
+1000G_exome_chr20_example_softFiltered.calls.sites.vcf.gz           test.single.b.score.phe
+test.gene.skat.cov                                                  test.single.b.score.zoom.20.1610894.pdf
+test.gene.skat.epacts                                               test.single.q.emmax.cov
+test.gene.skat.epacts.conf                                          test.single.q.emmax.eigR
+test.gene.skat.epacts.mh.pdf                                        test.single.q.emmax.epacts.conf
+test.gene.skat.epacts.OK                                            test.single.q.emmax.epacts.gz
+test.gene.skat.epacts.qq.pdf                                        test.single.q.emmax.epacts.gz.tbi
+test.gene.skat.epacts.R                                             test.single.q.emmax.epacts.mh.pdf
+test.gene.skat.epacts.top5000                                       test.single.q.emmax.epacts.OK
+test.gene.skat.ind                                                  test.single.q.emmax.epacts.qq.pdf
+test.gene.skat.Makefile                                             test.single.q.emmax.epacts.R
+test.gene.skat.phe                                                  test.single.q.emmax.epacts.top5000
+test.single.b.score.cov                                             test.single.q.emmax.ind
+test.single.b.score.epacts.conf                                     test.single.q.emmax.kinf
+test.single.b.score.epacts.gz                                       test.single.q.emmax.kinf.ind
+test.single.b.score.epacts.gz.tbi                                   test.single.q.emmax.kinf.Makefile
+test.single.b.score.epacts.mh.pdf                                   test.single.q.emmax.Makefile
+test.single.b.score.epacts.OK                                       test.single.q.emmax.phe
+test.single.b.score.epacts.qq.pdf                                   test.single.q.emmax.reml
+test.single.b.score.epacts.R
+[compute-092 /users/sjahansi/bin/epacts/EPACTS/bin/out]$ 
